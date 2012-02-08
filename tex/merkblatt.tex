@@ -1,0 +1,114 @@
+\documentclass[10pt,a4paper^, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage[noheadfoot,top=1.5cm,bottom=2.5cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{wasysym} % \smiley :)
+\usepackage{enumitem}
+\usepackage{scalefnt}
+\usepackage{sectsty}
+\usepackage{graphicx} % scalebox, rotatebox
+
+
+%%% AND: \wedge; OR: \vee
+%%% neue befehle -- bitte benutzen ;-)
+
+\newcommand{\basis}{\mathfrak} % basis in frakturschrift
+\newcommand{\menge}{\mathbb} % menge in mengenschrift ^^
+\newcommand{\und}{\wedge} % logisches und
+\newcommand{\oder}{\vee} % logisches oder
+\newcommand{\entspr}{\widehat{=}} % entspricht zeichen
+\newcommand{\liminfty}[1]{\lim \limits_{#1 \rightarrow \infty}} % lim {#1} --> infty
+\renewcommand{\epsilon}{\varepsilon} % *das* epsilon!
+%\renewcommand{\phi}{\varphi} % *das* phi!
+\newcommand{\pivot}{{\fboxsep1pt \fbox{$\ast$}}} % pivot-element in stufen-matrix
+\renewcommand{\d}{\mathrm{d}} % d/dx schreiben als \frac{\d}{\d x}
+
+
+%%% neue befehle -- bitte benutzen ;-)
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\parindent 0mm % Absatzeinzug auf 0 setzen
+\lhead{} % Überschrift
+\rhead{} % seitenzahl ausblenden -- erst nach TOC anzeigen
+\cfoot{} % seitenzahl ausblenden
+\renewcommand{\headrulewidth}{0mm} % header trennlinie ausblenden
+
+\begin{document}
+\scalefont{0.8} % schriftgröße skalieren: 10pt --> 8pt
+
+\begin{center}
+  {\large Analysis Merkblatt}\\
+  {}
+\end{center}
+
+\section{Zahlensysteme}
+\subsection{Axiomatische Charakterisierung der Reellen Zahlen}
+\subsection{Komplexe Zahlen}
+\subsection{Einige nützliche Bezeichungen}
+\subsection{Rechenregeln für Suprema}
+\subsection{Archimedizität der Reellen Zahlen}
+\subsection{Dichtheit der Rationalen Zahlen}
+\subsection{Dezimaldarstellung}
+
+\section{Ungleichungen}
+\subsection{Elementare Ungleichungen}
+\subsection{Cauchy-Schwarzsche Ungleichung}
+\subsection{Euklidische Norm}
+\subsubsection{Euklidisches Skalarprodukt}
+andere Normen
+
+\section{Folgen}
+\subsection{Konvergenz von Folgen}
+\subsubsection{Monotonie der Grenzwertbildung}
+\subsection{Beschränktheit konvergenter Folgen}
+\subsection{Stetigkeit: Rechnen mit Grenzwerten}
+\subsubsection{Elementare stetige Funktionen}
+\subsection{Monotone Folgen}
+\subsection{Beschränkte Folgen}
+\subsubsection{Satz von Bolzano-Weierstrass}
+\subsubsection{Lemma Seite 6/14, VL 6}
+\subsubsection{Korollar Seite 7/14, VL 6}
+\subsection{Exponentialfunktion}
+\subsubsection{Abschätzungen der Exponentialfunktion}
+
+\section{Reihen}
+\subsection{Konvergenz von Reihen}
+\subsubsection{Beispiele}
+\subsection{Vergleichskriterien}
+\subsubsection{Majorantenkriterium}
+\subsubsection{Quotientenkriterium}
+\subsubsection{•}
+
+\section{Konsequenzen der Stetigkeit}
+\subsection{Zwischenwertsatz} 
+\subsection{Existenz von Maximum und Minimum}
+\subsubsection{Lemma}
+\subsubsection{Korollar}
+
+
+Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
+
+
+
+
+
+%
+%
+%
+%
+%
+%
+%
+%
+% end!
+\end{document}
+
