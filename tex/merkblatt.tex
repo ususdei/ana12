@@ -63,13 +63,14 @@ Dreiecksungleichung: $|a+b| \leq |a|+|b|$ \\
 umgekehrte Dreiecksungleichung: $|a+b| \geq ||a|-|b||$ \\
 Ungleichheit für geometrische Summen: $1+x+x^2+x^3+\dots+x^n \leq \frac{1}{1-x} \quad (n \in \menge{N}_0, 0 \leq x < 1)$ \\
 Bernulli'sche Ungleichung: $(1+x)^n \geq 1+nx \quad (n \in \menge{N}_0, x > -1)$ \\
-Ungleichung zwischen geometrischem und arithmetischem Mitte: $\sqrt{ab} \leq \frac{a+b}{2} \quad (a,b \geq 0)$ \\
+Ungleichung zwischen geometrischem und arithmetischem Mittel: $\sqrt{ab} \leq \frac{a+b}{2} \quad (a,b \geq 0)$ \\
 Ungleichung vom mittleren Verhältnis: $min(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n}) 
 					\leq \frac{a_1+\dots+a_n}{b_1+\dots+b_n} 
 					\leq max(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n})
 					\quad (b_1,\dots,b_n > 0)$
-\subsection{Cauchy-Schwarzsche Ungleichung}
-$\sum\limits_{k=1}^n x_ky_k \leq \sqrt{\sum\limits_{k=1}^n x_n^2} \cdot \sqrt{\sum\limits_{k=1}^n y_n^2} \quad (x_1,\dots,x_n,y_1,\dots,y_n \in \menge{R})$
+\subsection{Cauchy-Schwarz'sche Ungleichung}
+$\sum\limits_{k=1}^n x_ky_k \leq \sqrt{\sum\limits_{k=1}^n x_n^2} \cdot \sqrt{\sum\limits_{k=1}^n y_n^2} \quad (x_1,\dots,x_n,y_1,\dots,y_n \in \menge{R})$ \\
+oder auch: $\langle x,y \rangle \leq ||x|| \cdot ||y|| \quad (x,y \in \menge{R}^n)$
 \subsection{Euklidische Norm}
 $||x|| := \sqrt{\langle x,x \rangle} = \sqrt{\sum\limits_{k=1}^n x_n^2}$ \quad f"ur $x \in \menge{R}^n$
 \subsubsection{Euklidisches Skalarprodukt}
@@ -103,6 +104,44 @@ andere Normen
 \subsection{Existenz von Maximum und Minimum}
 \subsubsection{Lemma}
 \subsubsection{Korollar}
+
+\section{Differenzialgleichungen}
+\subsection{Skalare gew"ohnliche DGL 1.Ordnung}
+lässt sich ein Anfangswertproblem schreiben als \\ $x' = f(t)g(x) \quad x(t_0) = x_0$  \\
+und sind ferner $f,g$ stetig und $g(x_0) \neq 0$, dann existiert eine lokale stetige Lösung $\phi(t)$ mit \\
+$\int\limits_{t_0}^t f(\tau) \d \tau = \int\limits_{x_0}^{\phi(t)} \frac{1}{g(\xi)} \d \xi$ \\
+Falls $g(x_o) = 0  \quad \Rightarrow \quad \phi(t) = x_0$
+
+\subsection{Skalare lineare gew"ohnliche DGL n-ter Ordnung}
+$x^{(n)} + a_{n-1}x^{(n-1)} + \dots + a_0x = b(t)$ \\
+Alle Lösungen lassen sich schreiben als $\phi(t) = \phi_h(t) + \phi_s(t)$ \\
+Bestimmung der homogenen Lsg: \\
+$p(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \dots + a_0\lambda^0$  \\
+Seinen $\lambda_1,\dots,\lambda_s$ verschiedene Nullstellen des Polynoms $p(\lambda)$ mit den Vielfachheiten $r_1,\dots,r_s$,
+dann bilden folgende Funktionen eine Lösungsbasis $\langle \phi_h(t) \rangle$ des homogenen Problems: \\
+$e^{\lambda t}, te^{\lambda_jt},\dots,t^{r_j-1}e^{\lambda_jt} \quad ( 1 \leq j \leq s )$ \\
+Fall 1: Alle $\lambda_j$ reell $\quad \Rightarrow$ bereits reelle Lösungsbasis. \\
+Fall 2: $\lambda_k$ komplex $\Rightarrow \overline{\lambda_k}$ auch Nullstelle von $p$
+	$\lambda_k = \alpha_k + i\beta_k$ und $\overline{\lambda_k}$ ersetzen durch: 
+	$te^{\alpha_kt}cos(\beta_kt), t^ke^{\alpha_kt}sin{\beta_kt} \quad (1 \leq k \leq r_j-1)$
+
+\subsection{Lineare gew"ohnliche DGL im $\menge{R}^n$}
+Sei $y = (y_1,\dots,y_n)^T \in \menge{R}^n$, dann $y' = Ay, A \in \menge{R}^{n\times n}$ Matrix \\
+Sind $y_1(t),\dots,y_n(t)$ linear unabh"angige reelle Fundamentallösungen von $y' = Ay$,
+so ist \\
+$y(t) = \alpha_1 y_1(t)+\dots+\alpha_ny_(t) \quad (\alpha_1,\dots,\alpha_n \in \menge{R}$ beliebig$)$ die allgemeine L"osung\\
+Berechnung der Fundamentall"osungen:
+\begin{enumerate}
+\item{} Sei $\lambda \in \menge{C}$ ein Eigenwert von $A$, $z \in \menge{C}^n \setminus \{0\}$ der zugeh"orige Eigenvektor,
+dann ist $y(t) = e^{\lambda t} \cdot z$ eine Lösung von $y' = Ay$  \\
+denn $y(t) = e^{\lambda t} \cdot z, Ax = Ae^{\lambda t}z = e^{\lambda t}Az = \lambda e^{\lambda t}z$ \\
+Existieren zum Eigenwert $\lambda \in \menge{C}$ linear unabh"angige Eigenvektoren $z_1,\dots,z_k$, so sind die Lösungen
+$y_1(t) = e^{\lambda t}z_1, \dots, y_k(t) = e^{\lambda t}z^k$ linear unabh"angig.
+\item{} Sei $\lambda \in \menge{C} \setminus \menge{R}$, d.h. $\lambda = \alpha + i\beta, \beta \neq 0 \quad z \in \menge{C}^n \setminus \{0\}$ sein EV,
+dann sind $y_1(t) = Re(e^{\lambda t} \cdot z), \quad y_2(t) = Im(e^{\lambda t} \cdot z)$ zwei linear unabh"angige reelle L"osungen von $y' = Ay$ 
+und $\overline\lambda$ kann ausgeschlossen werden.
+\item{} Eigenvektoren zu verschiedenen Eigenwerten sind linear unabh"angig.
+\end{enumerate}
 
 
 Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
