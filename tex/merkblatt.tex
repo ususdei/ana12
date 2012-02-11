@@ -7,9 +7,7 @@
 \usepackage[noheadfoot,top=1.5cm,bottom=2.5cm,left=1.5cm,right=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{wasysym} % \smiley :)
-\usepackage{enumitem}
 \usepackage{scalefnt}
-\usepackage{sectsty}
 \usepackage{graphicx} % scalebox, rotatebox
 
 
@@ -23,7 +21,7 @@
 \newcommand{\entspr}{\widehat{=}} % entspricht zeichen
 \newcommand{\liminfty}[1]{\lim \limits_{#1 \rightarrow \infty}} % lim {#1} --> infty
 \renewcommand{\epsilon}{\varepsilon} % *das* epsilon!
-%\renewcommand{\phi}{\varphi} % *das* phi!
+\renewcommand{\phi}{\varphi} % *das* phi!
 \newcommand{\pivot}{{\fboxsep1pt \fbox{$\ast$}}} % pivot-element in stufen-matrix
 \renewcommand{\d}{\mathrm{d}} % d/dx schreiben als \frac{\d}{\d x}
 
@@ -61,6 +59,15 @@
 
 \section{Ungleichungen}
 \subsection{Elementare Ungleichungen}
+Dreiecksungleichung: $|a+b| \leq |a|+|b|$ \\
+umgekehrte Dreiecksungleichung: $|a+b| \geq ||a|-|b||$ \\
+Ungleichheit für geometrische Summen: $1+x+x^2+x^3+\dots+x^n \leq \frac{1}{1-x} \quad (n \in \menge{N}_0, 0 \leq x < 1)$ \\
+Bernulli'sche Ungleichung: $(1+x)^n \geq 1+nx \quad (n \in \menge{N}_0, x > -1)$ \\
+Ungleichung zwischen geometrischem und arithmetischem Mitte: $\sqrt{ab} \leq \frac{a+b}{2} \quad (a,b \geq 0)$ \\
+Ungleichung vom mittleren Verhältnis: $min(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n}) 
+					\leq \frac{a_1+\dots+a_n}{b_1+\dots+b_n} 
+					\leq max(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n})
+					\quad (b_1,\dots,b_n > 0)$
 \subsection{Cauchy-Schwarzsche Ungleichung}
 \subsection{Euklidische Norm}
 \subsubsection{Euklidisches Skalarprodukt}
