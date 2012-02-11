@@ -105,7 +105,37 @@ andere Normen
 \subsubsection{Lemma}
 \subsubsection{Korollar}
 
-\section{Differenzialgleichungen}
+\section{Kurven}
+\begin{itemize}
+\item{Def.:} Sei $\gamma : I \rightarrow \menge{R}^n$ eine diffbare Kurve, 
+dann heißt $\gamma'(t)$ Tangentialvektor (TV) oder Geschwindigkeitsvektor von $\gamma$ zum Zeitpunkt $t$ \\
+$||\gamma'(t)|| = \sqrt{\gamma'_1(t)^2 + \dots + \gamma'_n(t)^2}$ heißt Geschwindigkeit zum Zeitpunkt t \\
+$\frac{\gamma'(t)}{||\gamma'(t)||}$ heißt Tangentialeinheitsvektor (TEV) (falls $\gamma'(t) \neq 0$).
+$\gamma: I \rightarrow \menge{R}^n$ diffbar heißt regul"ar falls $\gamma'(t) \neq 0 \quad \forall t \in I$
+\item{Satz:} Eine außer an endlich vielen Stellen stetig diffbare Kurve $\gamma: I \rightarrow \menge{R}^n, I=[a,b]$ ist rektifizierbar und hat Länge
+$S(\gamma) = \int\limits_a^b || \gamma(t) || \d t$
+\item{Korollar:} Sei $f:[a,b] \rightarrow \menge{R}$ stetig diffbar, $\gamma:[a,b] \rightarrow \menge{R}^2$ \\
+$\gamma(x) = (x, f(x))$, 
+dann $S(f) = \int\limits_a^b\sqrt{1+f'^2(x)} \d x $
+\end{itemize}
+
+
+\subsection{Parameterwechsel}
+Sei $\gamma : [a,b] \rightarrow \menge{R}^n$ Kurve und rektifizierbar. \\
+Ziel: $\tilde\lambda : [a', b'] \rightarrow [a,b]$ mit gleicher Spur wie $\gamma$, aber $DG = 1 \ \forall t \in [a', b']$ \\
+1)  Sei $\phi:[a', b'] \rightarrow [a,b]$ stetig, bijektiv, dann heißt $\phi$ Parametertransformation von $[a,b]$ nach $[a',b']$ \\
+Definiere: $\tilde\gamma = \gamma \circ \phi, \tilde\gamma:[a', b'] \rightarrow \menge{R}^n$ mit $\tilde\gamma([a',b']) = \gamma(\phi([a',b'])) = \gamma([a,b])$ \\
+2) $S(\xi) = \int\limits_a^\xi ||\gamma'(t)|| \d t, s(0) = 0, s(b) = S(\gamma)$ \\
+$s'(\xi) = ||\gamma'(\xi)|| > 0$ \\
+$s [a,b] \rightarrow [0, S(\gamma)]$ und $s(t) = \int\limits_0^t ||\gamma'(\tau)|| \d \tau $ \\
+$s^{-1}[0,S(\gamma)] \rightarrow [a,b] \qquad s^{-1}$ wird $\phi$ sein. \\
+$\tilde\gamma'(\xi) = (\gamma \circ s^{-1})'(\xi) = \gamma'(s^{-1}(\xi)) \cdot (s^{-1})'(\xi) = 
+\gamma'(s^{-1}(\xi)\cdot \frac{1}{s'(s^{-1}(\xi))} = \gamma'(s^{-1}(\xi) \cdot \frac{1}{||\gamma'(s^{-1}(\xi))||}$
+
+
+
+
+\section{Differentialgleichungen}
 \subsection{Skalare gew"ohnliche DGL 1.Ordnung}
 lässt sich ein Anfangswertproblem schreiben als \\ $x' = f(t)g(x) \quad x(t_0) = x_0$  \\
 und sind ferner $f,g$ stetig und $g(x_0) \neq 0$, dann existiert eine lokale stetige Lösung $\phi(t)$ mit \\
@@ -142,6 +172,10 @@ dann sind $y_1(t) = Re(e^{\lambda t} \cdot z), \quad y_2(t) = Im(e^{\lambda t} \
 und $\overline\lambda$ kann ausgeschlossen werden.
 \item{} Eigenvektoren zu verschiedenen Eigenwerten sind linear unabh"angig.
 \end{enumerate}
+
+\subsection{Satz con Picard-Lindel"of}
+Gegeben folgendes Anfangswertproblem: $y' = f(t,y) \quad y(t_0) = x_0$ \\
+Sei $\phi$ stetig und $\frac{\partial f}{\partial y'_j} \quad \forall j.1 \leq j \leq n$ stetig, dann hat AWP eine eindeutige L"osung in der lokalen Umgebung von $t_0$
 
 
 Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
