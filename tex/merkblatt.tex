@@ -123,8 +123,38 @@ andere Normen
 	Das gleiche gilt für Folgen aus  $\mathbb{R}^d$ und $\mathbb{C}$ mit $||\cdot||_2$
 	bzw. dem Absolutbetrag in $\mathbb{C}$.
 \subsection{Stetigkeit: Rechnen mit Grenzwerten}
-	Eine Funktion $f $
-\subsubsection{Elementare stetige Funktionen}
+	Eine Funktion $f : D \subseteq \mathbb{R}^d \to \mathbb{R}^q$ heißt 
+	im Punkt $x \in D$ ihres Definitionsbereichs stetig, falls für jede Folge 
+	$(x_n)$ aus $D$ gilt:
+	$$
+		x_n \overset{n \to \infty}{\to} x
+		\qquad \Rightarrow \qquad
+		f(x_n) \overset{n \to \infty}{\to} f(x)
+	$$
+	\subsubsection{Elementare stetige Funktionen}
+	\begin{center}
+	\newcommand{\infowidth}{2cm}
+	\newcommand{\aufsichtwidth}{10cm}
+	\begin{tabular}{|c|c|}
+	\hline
+	$D \subseteq \mathbb{R}$ &  $f(x) \in \mathbb{R}$ \\
+	\hline
+	$\mathbb{R}$ & $f(x) = c, c \in \mathbb{R}$\\
+	$\mathbb{R}$ & $f(x) = |x|$\\
+	$[0, \infty)$& $f(x) = \sqrt{x}$\\
+	\hline
+	$D \subseteq \mathbb{R}^2$ &  $f(x, y) \in \mathbb{R}$ \\
+	\hline
+	$\mathbb{R}^2$ & $f(x, y) = x+y$\\
+	$\mathbb{R}^2$ & $f(x, y) = x \cdot y$\\
+	$\mathbb{R} \times (\mathbb{R} \setminus \{0\}) $ & $f(x, y) = x \div y$\\
+	\hline
+	\end{tabular}
+	\end{center}
+	Summe, Produkt, Quotient zweier konvergenter Folgen ist konvergent. Für
+	divergente/uneigentlich konvergente Folgen gilt das nicht.
+	\subsubsection{Stetigkeit der Verknüpfung von Funktionen}
+		
 \subsection{Monotone Folgen}
 \subsection{Beschränkte Folgen}
 \subsubsection{Satz von Bolzano-Weierstrass}
@@ -178,13 +208,13 @@ $\tilde\gamma'(\xi) = (\gamma \circ s^{-1})'(\xi) = \gamma'(s^{-1}(\xi)) \cdot (
 
 
 \section{Differentialgleichungen}
-\subsection{Skalare gew"ohnliche DGL 1.Ordnung}
+\subsection{Skalare gew"ohnliche DGL 1. Ordnung}
 lässt sich ein Anfangswertproblem schreiben als \\ $x' = f(t)g(x) \quad x(t_0) = x_0$  \\
 und sind ferner $f,g$ stetig und $g(x_0) \neq 0$, dann existiert eine lokale stetige Lösung $\phi(t)$ mit \\
 $\int\limits_{t_0}^t f(\tau) \d \tau = \int\limits_{x_0}^{\phi(t)} \frac{1}{g(\xi)} \d \xi$ \\
 Falls $g(x_o) = 0  \quad \Rightarrow \quad \phi(t) = x_0$
 
-\subsection{Skalare lineare gew"ohnliche DGL n-ter Ordnung}
+\subsection{Skalare lineare gew"ohnliche DGL $n$-ter Ordnung}
 $x^{(n)} + a_{n-1}x^{(n-1)} + \dots + a_0x = b(t)$ \\
 Alle Lösungen lassen sich schreiben als $\phi(t) = \phi_h(t) + \phi_s(t)$ \\
 Bestimmung der homogenen Lsg: \\
