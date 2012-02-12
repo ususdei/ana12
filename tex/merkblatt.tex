@@ -87,9 +87,43 @@ andere Normen
 
 \section{Folgen}
 \subsection{Konvergenz von Folgen}
+	Die Folge $(a_n)$ konvergiert gegen den Grenzwert $a \in \mathbb{R}$, falls für
+	jede Genauigkeit $\epsilon > 0$ die Abschätzung $|a_n - a| \leq \epsilon$ für fast
+	alle $n \in \mathbb{N}$ eingehalten wird.
 \subsubsection{Monotonie der Grenzwertbildung}
+	Es seien $a_n \to a$ und $b_n \to b$.\\
+	Gilt $a_n \leq b_n \, \forall n \geq n_0 \in \mathbb{N}$, dann gilt $ a \leq b$.
+\subsubsection{Einschließungsregel}
+	Es sei $\forall \, n \geq n_0 \in \mathbb{N} : \, a_n \leq a_n' \leq a_n''$.
+	Dann gilt 
+	$$\lim_{n \to \infty} a_n = \lim_{n \to \infty} a_n'' = a 
+	\qquad \Rightarrow  \qquad \lim_{n \to \infty} a_n' = a$$
+\subsubsection{Konvergenz in $\mathbb{R}^d$ und $\mathbb{C}$}
+	Die vektorwertige Folge\\
+	$\mathbb{N} \ni n \mapsto x_n = 
+		\begin{pmatrix}
+			x_{n_1}\\
+			\vdots \\
+			x_{n_d}
+		\end{pmatrix}$
+	konvergiert gegen den Grenzwert $
+		x = \begin{pmatrix}
+			x_{1}\\
+			\vdots \\
+			x_{d}
+		\end{pmatrix}$\\
+	$$\Leftrightarrow 
+		\lim_{n \to \infty} x_{n_k} = x_k 
+		\quad \forall k \in \{1, \dots, d \} 
+		\text{(komponentenweise Grenzwerte existieren)}$$
+	Analog in $\mathbb{C}$ (isomorph zu $\mathbb{R}^2$).
 \subsection{Beschränktheit konvergenter Folgen}
+	Eine konvergente Folge $(a_n) \subset \mathbb{R}$ ist beschränkt.\\
+	D.h. $\exists c > 0 $ mit $|a_n| \leq c \forall n \in \mathbb{N}$.\\
+	Das gleiche gilt für Folgen aus  $\mathbb{R}^d$ und $\mathbb{C}$ mit $||\cdot||_2$
+	bzw. dem Absolutbetrag in $\mathbb{C}$.
 \subsection{Stetigkeit: Rechnen mit Grenzwerten}
+	Eine Funktion $f $
 \subsubsection{Elementare stetige Funktionen}
 \subsection{Monotone Folgen}
 \subsection{Beschränkte Folgen}
@@ -105,7 +139,7 @@ andere Normen
 \subsection{Vergleichskriterien}
 \subsubsection{Majorantenkriterium}
 \subsubsection{Quotientenkriterium}
-\subsubsection{•}
+\subsubsection{Wurzelkriterium}
 
 \section{Konsequenzen der Stetigkeit}
 \subsection{Zwischenwertsatz} 
