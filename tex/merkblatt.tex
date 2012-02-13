@@ -183,6 +183,25 @@ andere Normen
 \subsubsection{Lemma}
 \subsubsection{Korollar}
 
+\section{Integral}
+Defs.:  \dots \\
+Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckweise stetig, dann ist $f$ Riemann integrierbar.
+\underline{Hauptsatz der Differential und Integralrechnung} \\
+	Sei $f:[a,b] \rightarrow \menge{R} stetig, c \in [a,b]$ fest, dann $\quad F(x) := \int\limits_c^x f(y) \d y$
+	\begin{enumerate}
+	\item stetig diffbar
+	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
+	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
+	\end{enumerate}
+\subsection{Substitution}
+	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
+	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
+	$x = g^{-1}(y) \Leftrightarrow y=g(x) \quad \frac{\d y}{\d x} = g'(x)$
+\subsection{uneigentliche Integrale}
+	Sei $f:[a,b] \rightarrow \menge{R}$ integrierbar $\forall [\alpha, \beta], a \leq \alpha < \beta < b$ \\
+	$ \Rightarrow \int\limits_a^b f(x) \d x = \lim\limits_{\beta \to b} \int\limits_a^\beta f(x) \d x$
+
+
 
 \section{Potenzreihe}
 	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
