@@ -183,77 +183,105 @@ andere Normen
 \subsubsection{Lemma}
 \subsubsection{Korollar}
 
+
+\section{Potenzreihe}
+	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
+	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) = \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
+	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{limsup \sqrt[n]{|a_n|}}$. \\
+	Welche Funktionen $f$ haben die Darstellung $f(x) = \sum\limits_{k=0}^\infty a_kx^k \quad \forall x \in (-r,r) \rightarrow$ \underline{Taylorentwicklung} \\
+	$f: \menge{I} \rightarrow \menge{R}, \menge{I} = (a,b) \quad f (n+1)$-mal stetig diffbar, dann: \\
+	$\forall x,a \in \menge{I}: (x) = \underbrace{ \sum\limits_{k=0}^{n} \frac{f^{(k)} (a)}{k!}(x-a)^k }_{\text{Taylorpolynom n-ten Grades von f um a}} + R_{n+1}(a,x)$ \\
+	$R_{n+1}(a,x) = \begin{cases}
+		\frac{1}{n!} \int\limits_a^x(x-t)^nf^{(n+1)}(t) \d t \\
+		\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-a)^{n+1} \quad \xi \in [x,a]
+	\end{cases}$ \\
+	falls f $\infty$-mal diffbar, $R_{n+1}(x) \rightarrow 0 (n \rightarrow \infty)
+	\Rightarrow f(x) = \sum\limits_{k=0}^\infty \frac{f^k(a)}{k!} (x-a)^k$ \quad (Taylorreihe von f um a) \\
+	$f:\menge{R} \rightarrow \menge{R}$ heißt analytisch in $x=0$, falls f als $f(x) = \sum\limits_{k=0}^\infty a_k^xk \quad \forall |x| < r$ darstellbar ist.
+	\begin{itemize}
+		\item $f \in C^\infty((-r,r))$
+		\item $f$ analytisch, $g$ analytisch $\Rightarrow f \circ g$ analytisch mit
+			$(f \circ g)(x) = \sum\limits_{k=0}^\infty \sum\limits_{j=0}^\infty (a_j \cdot b_{k-j})x^k \quad , |x| < min\{r_f, r_g\}$
+		\item $a_k = \frac{f^{(k)}(0)}{k!}$
+		\item $f$ analytisch, $f(0) \neq 0 \Rightarrow \frac{1}{f}$ analytisch
+	\end{itemize}
+
+
+
 \section{Kurven}
-\begin{itemize}
-\item{Def.:} Sei $\gamma : I \rightarrow \menge{R}^n$ eine diffbare Kurve, 
-dann heißt $\gamma'(t)$ Tangentialvektor (TV) oder Geschwindigkeitsvektor von $\gamma$ zum Zeitpunkt $t$ \\
-$||\gamma'(t)|| = \sqrt{\gamma'_1(t)^2 + \dots + \gamma'_n(t)^2}$ heißt Geschwindigkeit zum Zeitpunkt t \\
-$\frac{\gamma'(t)}{||\gamma'(t)||}$ heißt Tangentialeinheitsvektor (TEV) (falls $\gamma'(t) \neq 0$).
-$\gamma: I \rightarrow \menge{R}^n$ diffbar heißt regul"ar falls $\gamma'(t) \neq 0 \quad \forall t \in I$
-\item{Satz:} Eine außer an endlich vielen Stellen stetig diffbare Kurve $\gamma: I \rightarrow \menge{R}^n, I=[a,b]$ ist rektifizierbar und hat Länge
-$S(\gamma) = \int\limits_a^b || \gamma(t) || \d t$
-\item{Korollar:} Sei $f:[a,b] \rightarrow \menge{R}$ stetig diffbar, $\gamma:[a,b] \rightarrow \menge{R}^2$ \\
-$\gamma(x) = (x, f(x))$, 
-dann $S(f) = \int\limits_a^b\sqrt{1+f'^2(x)} \d x $
-\end{itemize}
+	\begin{itemize}
+	\item{Def.:} Sei $\gamma : I \rightarrow \menge{R}^n$ eine diffbare Kurve, 
+		dann heißt $\gamma'(t)$ Tangentialvektor (TV) oder Geschwindigkeitsvektor von $\gamma$ zum Zeitpunkt $t$ \\
+		$||\gamma'(t)|| = \sqrt{\gamma'_1(t)^2 + \dots + \gamma'_n(t)^2}$ heißt Geschwindigkeit zum Zeitpunkt t \\
+		$\frac{\gamma'(t)}{||\gamma'(t)||}$ heißt Tangentialeinheitsvektor (TEV) (falls $\gamma'(t) \neq 0$).
+		$\gamma: I \rightarrow \menge{R}^n$ diffbar heißt regul"ar falls $\gamma'(t) \neq 0 \quad \forall t \in I$
+	\item{Satz:} Eine außer an endlich vielen Stellen stetig diffbare Kurve $\gamma: I \rightarrow \menge{R}^n, I=[a,b]$ ist rektifizierbar und hat Länge
+		$S(\gamma) = \int\limits_a^b || \gamma(t) || \d t$
+	\item{Korollar:} Sei $f:[a,b] \rightarrow \menge{R}$ stetig diffbar, $\gamma:[a,b] \rightarrow \menge{R}^2$ \\
+		$\gamma(x) = (x, f(x))$, 
+		dann $S(f) = \int\limits_a^b\sqrt{1+f'^2(x)} \d x $
+	\end{itemize}
 
 
 \subsection{Parameterwechsel}
-Sei $\gamma : [a,b] \rightarrow \menge{R}^n$ Kurve und rektifizierbar. \\
-Ziel: $\tilde\lambda : [a', b'] \rightarrow [a,b]$ mit gleicher Spur wie $\gamma$, aber $DG = 1 \ \forall t \in [a', b']$ \\
-1)  Sei $\phi:[a', b'] \rightarrow [a,b]$ stetig, bijektiv, dann heißt $\phi$ Parametertransformation von $[a,b]$ nach $[a',b']$ \\
-Definiere: $\tilde\gamma = \gamma \circ \phi, \tilde\gamma:[a', b'] \rightarrow \menge{R}^n$ mit $\tilde\gamma([a',b']) = \gamma(\phi([a',b'])) = \gamma([a,b])$ \\
-2) $S(\xi) = \int\limits_a^\xi ||\gamma'(t)|| \d t, s(0) = 0, s(b) = S(\gamma)$ \\
-$s'(\xi) = ||\gamma'(\xi)|| > 0$ \\
-$s [a,b] \rightarrow [0, S(\gamma)]$ und $s(t) = \int\limits_0^t ||\gamma'(\tau)|| \d \tau $ \\
-$s^{-1}[0,S(\gamma)] \rightarrow [a,b] \qquad s^{-1}$ wird $\phi$ sein. \\
-$\tilde\gamma'(\xi) = (\gamma \circ s^{-1})'(\xi) = \gamma'(s^{-1}(\xi)) \cdot (s^{-1})'(\xi) = 
-\gamma'(s^{-1}(\xi)\cdot \frac{1}{s'(s^{-1}(\xi))} = \gamma'(s^{-1}(\xi) \cdot \frac{1}{||\gamma'(s^{-1}(\xi))||}$
+	Sei $\gamma : [a,b] \rightarrow \menge{R}^n$ Kurve und rektifizierbar. \\
+	Ziel: $\tilde\lambda : [a', b'] \rightarrow [a,b]$ mit gleicher Spur wie $\gamma$, aber $DG = 1 \ \forall t \in [a', b']$ \\
+	\begin{enumerate}
+	\item{}  Sei $\phi:[a', b'] \rightarrow [a,b]$ stetig, bijektiv, dann heißt $\phi$ Parametertransformation von $[a,b]$ nach $[a',b']$ \\
+	Definiere: $\tilde\gamma = \gamma \circ \phi, \tilde\gamma:[a', b'] \rightarrow \menge{R}^n$ mit $\tilde\gamma([a',b']) = \gamma(\phi([a',b'])) = \gamma([a,b])$ \\
+	\item{} $S(\xi) = \int\limits_a^\xi ||\gamma'(t)|| \d t, s(0) = 0, s(b) = S(\gamma)$ \\
+	$s'(\xi) = ||\gamma'(\xi)|| > 0$ \\
+	$s [a,b] \rightarrow [0, S(\gamma)]$ und $s(t) = \int\limits_0^t ||\gamma'(\tau)|| \d \tau $ \\
+	$s^{-1}[0,S(\gamma)] \rightarrow [a,b] \qquad s^{-1}$ wird $\phi$ sein. \\
+	$\tilde\gamma'(\xi) = (\gamma \circ s^{-1})'(\xi) = \gamma'(s^{-1}(\xi)) \cdot (s^{-1})'(\xi) = 
+	\gamma'(s^{-1}(\xi)\cdot \frac{1}{s'(s^{-1}(\xi))} = \gamma'(s^{-1}(\xi) \cdot \frac{1}{||\gamma'(s^{-1}(\xi))||}$
+	\end{enumerate}
 
 
 
 
 \section{Differentialgleichungen}
 \subsection{Skalare gew"ohnliche DGL 1. Ordnung}
-lässt sich ein Anfangswertproblem schreiben als \\ $x' = f(t)g(x) \quad x(t_0) = x_0$  \\
-und sind ferner $f,g$ stetig und $g(x_0) \neq 0$, dann existiert eine lokale stetige Lösung $\phi(t)$ mit \\
-$\int\limits_{t_0}^t f(\tau) \d \tau = \int\limits_{x_0}^{\phi(t)} \frac{1}{g(\xi)} \d \xi$ \\
-Falls $g(x_o) = 0  \quad \Rightarrow \quad \phi(t) = x_0$
+	lässt sich ein Anfangswertproblem schreiben als \\ $x' = f(t)g(x) \quad x(t_0) = x_0$  \\
+	und sind ferner $f,g$ stetig und $g(x_0) \neq 0$, dann existiert eine lokale stetige Lösung $\phi(t)$ mit \\
+	$\int\limits_{t_0}^t f(\tau) \d \tau = \int\limits_{x_0}^{\phi(t)} \frac{1}{g(\xi)} \d \xi$ \\
+	Falls $g(x_o) = 0  \quad \Rightarrow \quad \phi(t) = x_0$
 
 \subsection{Skalare lineare gew"ohnliche DGL $n$-ter Ordnung}
-$x^{(n)} + a_{n-1}x^{(n-1)} + \dots + a_0x = b(t)$ \\
-Alle Lösungen lassen sich schreiben als $\phi(t) = \phi_h(t) + \phi_s(t)$ \\
-Bestimmung der homogenen Lsg: \\
-$p(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \dots + a_0\lambda^0$  \\
-Seinen $\lambda_1,\dots,\lambda_s$ verschiedene Nullstellen des Polynoms $p(\lambda)$ mit den Vielfachheiten $r_1,\dots,r_s$,
-dann bilden folgende Funktionen eine Lösungsbasis $\langle \phi_h(t) \rangle$ des homogenen Problems: \\
-$e^{\lambda t}, te^{\lambda_jt},\dots,t^{r_j-1}e^{\lambda_jt} \quad ( 1 \leq j \leq s )$ \\
-Fall 1: Alle $\lambda_j$ reell $\quad \Rightarrow$ bereits reelle Lösungsbasis. \\
-Fall 2: $\lambda_k$ komplex $\Rightarrow \overline{\lambda_k}$ auch Nullstelle von $p$
-	$\lambda_k = \alpha_k + i\beta_k$ und $\overline{\lambda_k}$ ersetzen durch: 
-	$te^{\alpha_kt}cos(\beta_kt), t^ke^{\alpha_kt}sin{\beta_kt} \quad (1 \leq k \leq r_j-1)$
+	$x^{(n)} + a_{n-1}x^{(n-1)} + \dots + a_0x = b(t)$ \\
+	Alle Lösungen lassen sich schreiben als $\phi(t) = \phi_h(t) + \phi_s(t)$ \\
+	Bestimmung der homogenen Lsg: \\
+	$p(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \dots + a_0\lambda^0$  \\
+	Seinen $\lambda_1,\dots,\lambda_s$ verschiedene Nullstellen des Polynoms $p(\lambda)$ mit den Vielfachheiten $r_1,\dots,r_s$,
+	dann bilden folgende Funktionen eine Lösungsbasis $\langle \phi_h(t) \rangle$ des homogenen Problems: \\
+	$e^{\lambda t}, te^{\lambda_jt},\dots,t^{r_j-1}e^{\lambda_jt} \quad ( 1 \leq j \leq s )$ \\
+	Fall 1: Alle $\lambda_j$ reell $\quad \Rightarrow$ bereits reelle Lösungsbasis. \\
+	Fall 2: $\lambda_k$ komplex $\Rightarrow \overline{\lambda_k}$ auch Nullstelle von $p$
+		$\lambda_k = \alpha_k + i\beta_k$ und $\overline{\lambda_k}$ ersetzen durch: 
+		$te^{\alpha_kt}cos(\beta_kt), t^ke^{\alpha_kt}sin{\beta_kt} \quad (1 \leq k \leq r_j-1)$
 
 \subsection{Lineare gew"ohnliche DGL im $\menge{R}^n$}
-Sei $y = (y_1,\dots,y_n)^T \in \menge{R}^n$, dann $y' = Ay, A \in \menge{R}^{n\times n}$ Matrix \\
-Sind $y_1(t),\dots,y_n(t)$ linear unabh"angige reelle Fundamentallösungen von $y' = Ay$,
-so ist \\
-$y(t) = \alpha_1 y_1(t)+\dots+\alpha_ny_(t) \quad (\alpha_1,\dots,\alpha_n \in \menge{R}$ beliebig$)$ die allgemeine L"osung\\
-Berechnung der Fundamentall"osungen:
-\begin{enumerate}
-\item{} Sei $\lambda \in \menge{C}$ ein Eigenwert von $A$, $z \in \menge{C}^n \setminus \{0\}$ der zugeh"orige Eigenvektor,
-dann ist $y(t) = e^{\lambda t} \cdot z$ eine Lösung von $y' = Ay$  \\
-denn $y(t) = e^{\lambda t} \cdot z, Ax = Ae^{\lambda t}z = e^{\lambda t}Az = \lambda e^{\lambda t}z$ \\
-Existieren zum Eigenwert $\lambda \in \menge{C}$ linear unabh"angige Eigenvektoren $z_1,\dots,z_k$, so sind die Lösungen
-$y_1(t) = e^{\lambda t}z_1, \dots, y_k(t) = e^{\lambda t}z^k$ linear unabh"angig.
-\item{} Sei $\lambda \in \menge{C} \setminus \menge{R}$, d.h. $\lambda = \alpha + i\beta, \beta \neq 0 \quad z \in \menge{C}^n \setminus \{0\}$ sein EV,
-dann sind $y_1(t) = Re(e^{\lambda t} \cdot z), \quad y_2(t) = Im(e^{\lambda t} \cdot z)$ zwei linear unabh"angige reelle L"osungen von $y' = Ay$ 
-und $\overline\lambda$ kann ausgeschlossen werden.
-\item{} Eigenvektoren zu verschiedenen Eigenwerten sind linear unabh"angig.
-\end{enumerate}
+	Sei $y = (y_1,\dots,y_n)^T \in \menge{R}^n$, dann $y' = Ay, A \in \menge{R}^{n\times n}$ Matrix \\
+	Sind $y_1(t),\dots,y_n(t)$ linear unabh"angige reelle Fundamentallösungen von $y' = Ay$,
+	so ist \\
+	$y(t) = \alpha_1 y_1(t)+\dots+\alpha_ny_(t) \quad (\alpha_1,\dots,\alpha_n \in \menge{R}$ beliebig$)$ die allgemeine L"osung\\
+	Berechnung der Fundamentall"osungen:
+	\begin{enumerate}
+	\item{} Sei $\lambda \in \menge{C}$ ein Eigenwert von $A$, $z \in \menge{C}^n \setminus \{0\}$ der zugeh"orige Eigenvektor,
+		dann ist $y(t) = e^{\lambda t} \cdot z$ eine Lösung von $y' = Ay$  \\
+		denn $y(t) = e^{\lambda t} \cdot z, Ax = Ae^{\lambda t}z = e^{\lambda t}Az = \lambda e^{\lambda t}z$ \\
+		Existieren zum Eigenwert $\lambda \in \menge{C}$ linear unabh"angige Eigenvektoren $z_1,\dots,z_k$, so sind die Lösungen
+		$y_1(t) = e^{\lambda t}z_1, \dots, y_k(t) = e^{\lambda t}z^k$ linear unabh"angig.
+	\item{} Sei $\lambda \in \menge{C} \setminus \menge{R}$, d.h. $\lambda = \alpha + i\beta, \beta \neq 0 \quad z \in \menge{C}^n \setminus \{0\}$ sein EV,
+		dann sind $y_1(t) = Re(e^{\lambda t} \cdot z), \quad y_2(t) = Im(e^{\lambda t} \cdot z)$ zwei linear unabh"angige reelle L"osungen von $y' = Ay$ 
+		und $\overline\lambda$ kann ausgeschlossen werden.
+	\item{} Eigenvektoren zu verschiedenen Eigenwerten sind linear unabh"angig.
+	\end{enumerate}
 
-\subsection{Satz con Picard-Lindel"of}
-Gegeben folgendes Anfangswertproblem: $y' = f(t,y) \quad y(t_0) = x_0$ \\
-Sei $\phi$ stetig und $\frac{\partial f}{\partial y'_j} \quad \forall j.1 \leq j \leq n$ stetig, dann hat AWP eine eindeutige L"osung in der lokalen Umgebung von $t_0$
+\subsection{Satz von Picard-Lindel"of}
+	Gegeben folgendes Anfangswertproblem: $y' = f(t,y) \quad y(t_0) = x_0$ \\
+	Sei $\phi$ stetig und $\frac{\partial f}{\partial y'_j} \quad \forall j.1 \leq j \leq n$ stetig,
+	dann hat AWP eine eindeutige L"osung in der lokalen Umgebung von $t_0$
 
 
 Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
