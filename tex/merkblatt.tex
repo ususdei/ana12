@@ -227,13 +227,20 @@ andere Normen
 	Sei $(a_n) \subset \C$. Die Folge $(s_n)$ mit 
 	$s_n := a_1 + a_2 + \dots + a_n = \sum\limits_{k=1}^{n} a_k$ heißt (unendliche) Reihe
 	(Schreibweise $\sum a_k$) mit den Reihengliedern $a_n$ und den \textbf{Partialsummen}
-	$s_n$.\\
-	Die Reihe $(s_n)$ heißt konvergent, wenn $s_n \to s \in \C$
-	(Schreibweise: $s = \sum\limits_{k=1}^{\infty} a_k = a_1 + a_2 + \dots$). 
-	$s$ heißt Summe oder Wert der Reihe $(s_n)$.
+	$s_n$.
 	\subsection{Konvergenz von Reihen}
-		
+		Die Reihe $(s_n)$ heißt konvergent, wenn $s_n \to s \in \C$
+		(Schreibweise: $s = \sum\limits_{k=1}^{\infty} a_k = a_1 + a_2 + \dots$). 
+		$s$ heißt Summe oder Wert der Reihe $(s_n)$.
+		Wenn $s_n \to \pm \infty$, schreiben wir auch 
+		$\sum\limits_{k=1}^{\infty} a_k = \pm \infty$.
 		\subsubsection{Beispiele}
+			\begin{itemize}
+				\item Teleskopreihe: $ \sum\limits_{k=1}^{\infty} \frac{1}{k(k+1)}  = 1$
+				\item Geometrische Reihe: $ \sum\limits_{k=1}^{\infty} z^k = \frac{1}{1-z},
+				\qquad z \in \C, |z| < 1 $
+				\item Harmonische Reihe: $\sum\limits_{k=1}^{\infty} \frac{1}{k} = \infty $
+			\end{itemize}
 	\subsection{Vergleichskriterien}
 		\subsubsection{Majorantenkriterium}
 		\subsubsection{Quotientenkriterium}
