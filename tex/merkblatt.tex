@@ -27,6 +27,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\I}{\mathbb{I}}
 
 
 %%% neue befehle -- bitte benutzen ;-)
@@ -236,6 +237,30 @@ andere Normen
 \subsubsection{Lemma}
 \subsubsection{Korollar}
 
+
+
+\section{Ableiten}
+	Def.: $\I \in \R$ Intervall, $f: \I \to \R$ \\
+	$f$ heißt differenzierbar in $x_0 \in /I \\
+	\Leftrightarrow \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = c \in \R \\
+	\Leftrightarrow \forall (x_n)_{n \in \N} \subset \I$ mit $x_n \to x_0$ folgt, dass $\frac{f(x_n) - f(x_0)}{x_n-x_0} = c \in \R
+	\Leftrightarrow \lim\limits_{n \to 0} \frac{f(x_0 + h)-f(x_0)}{h} = \in \R$ \\
+	Falls der Grenzwert 
+	$\Leftrightarrow \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ existiert,
+	schreiben wir $f'(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$
+	\begin{itemize}
+	\item $f$ diffbar in $x_0 \Rightarrow f$ stetig in $x_0$
+	\item Kettenregel: $f,g$ Funktionen mit $f$ diffbar in $g(x_0), g$ diffbar in $x_0$
+		$\Rightarrow (f \circ g)'(x_0) = f'(g(x_0))g'(x_0)$
+	\item $f: \I \to \R, f$ injektiv $(f(x) = f(y) \Rightarrow x=y) \rightarrow f:I \to f(\I) bijektiv \Rightarrow f^{-1}$ existiert. \\
+		Ist $f'(y) \neq 0 \Rightarrow (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$
+	\item Arithmetikregeln:
+		\begin{itemize}
+		\item $(f + \lambda g)' = f' + \lambda g'$
+		\item $(f \cdot g)' = (f' \cdot g) + (f \cdot g')$
+		\item $(\frac{f}{g})' = \frac{f'\cdot g - f \cdot g'}{g^2}$
+		\end{itemize}
+	\end{itemize}
 
 \subsection{Mehrdimensionales Ableiten}
 	Def.: $U \in \menge{R}^n$ offen, \quad $f:U \to \menge{R}^m$ \\
