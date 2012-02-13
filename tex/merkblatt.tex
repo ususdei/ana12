@@ -247,6 +247,8 @@ andere Normen
 				\item Geometrische Reihe: $ \sum\limits_{k=1}^{\infty} z^k = \frac{1}{1-z},
 				\qquad z \in \C, |z| < 1 $
 				\item Harmonische Reihe: $\sum\limits_{k=1}^{\infty} \frac{1}{k} = \infty $
+				\item $\sum\limits_{k=1}^{\infty} \frac{1}{k^2}$ konvergiert nach 
+				Majoratenkriterium.
 			\end{itemize}
 	\subsection{Konvergenzkriterien}
 		\subsubsection{Majorantenkriterium}
@@ -294,6 +296,13 @@ andere Normen
 			\end{enumerate}
 	\subsection{Reihenumordnung}
 		\subsubsection{Absolute Konvergenz}
+			Sei $(a_n) \subset \C$.
+			Man sagt $\sum\limits_{k=1}^{n} a_k$ konvergiert absolut, wenn 
+			$\sum\limits_{k=1}^{n} |a_k| < \infty$. Konvergiert $\sum a_k$ absolut, so 
+			konvergiert $\sum a_k$ nach Majorantenkriterium.
+		\subsubsection{Umordnungssatz}
+			Nur absolut konvergente Reihen können beliebig umgeordnet werden, ohne dass
+			sich ihre Summe ändert.
 		
 \section{Konsequenzen der Stetigkeit}
 	\subsection{Zwischenwertsatz} 
@@ -528,8 +537,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	Gegeben folgendes Anfangswertproblem: $y' = f(t,y) \quad y(t_0) = x_0$ \\
 	Sei $\phi$ stetig und $\frac{\partial f}{\partial y'_j} \quad \forall j.1 \leq j \leq n$ stetig,
 	dann hat AWP eine eindeutige L"osung in der lokalen Umgebung von $t_0$
-
-
+\\\\\\
 Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
 
 
