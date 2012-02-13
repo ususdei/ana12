@@ -187,7 +187,7 @@ andere Normen
 \section{Potenzreihe}
 	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
 	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) = \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
-	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{limsup \sqrt[n]{|a_n|}}$. \\
+	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{\limsup \sqrt[n]{|a_n|}}$. \\
 	Welche Funktionen $f$ haben die Darstellung $f(x) = \sum\limits_{k=0}^\infty a_kx^k \quad \forall x \in (-r,r) \rightarrow$ \underline{Taylorentwicklung} \\
 	$f: \menge{I} \rightarrow \menge{R}, \menge{I} = (a,b) \quad f (n+1)$-mal stetig diffbar, dann: \\
 	$\forall x,a \in \menge{I}: (x) = \underbrace{ \sum\limits_{k=0}^{n} \frac{f^{(k)} (a)}{k!}(x-a)^k }_{\text{Taylorpolynom n-ten Grades von f um a}} + R_{n+1}(a,x)$ \\
@@ -196,8 +196,8 @@ andere Normen
 		\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-a)^{n+1} \quad \xi \in [x,a]
 	\end{cases}$ \\
 	falls f $\infty$-mal diffbar, $R_{n+1}(x) \rightarrow 0 (n \rightarrow \infty)
-	\Rightarrow f(x) = \sum\limits_{k=0}^\infty \frac{f^k(a)}{k!} (x-a)^k$ \quad (Taylorreihe von f um a) \\
-	$f:\menge{R} \rightarrow \menge{R}$ heißt analytisch in $x=0$, falls f als $f(x) = \sum\limits_{k=0}^\infty a_k^xk \quad \forall |x| < r$ darstellbar ist.
+	\Rightarrow f(x) = \sum\limits_{k=0}^\infty \frac{f^{(k)}(a)}{k!} (x-a)^k$ \quad (Taylorreihe von f um a) \\
+	$f:\menge{R} \rightarrow \menge{R}$ heißt analytisch in $x=0$, falls f als $f(x) = \sum\limits_{k=0}^\infty a_k x_k \quad \forall |x| < r$ darstellbar ist.
 	\begin{itemize}
 		\item $f \in C^\infty((-r,r))$
 		\item $f$ analytisch, $g$ analytisch $\Rightarrow f \circ g$ analytisch mit
