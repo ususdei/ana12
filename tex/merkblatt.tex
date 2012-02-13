@@ -398,6 +398,17 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	\gamma'(s^{-1}(\xi)\cdot \frac{1}{s'(s^{-1}(\xi))} = \gamma'(s^{-1}(\xi) \cdot \frac{1}{||\gamma'(s^{-1}(\xi))||}$
 	\end{enumerate}
 
+\subsection{Kr"ummung}
+	Sei $T(S) = \gamma'(s)$ Tangentialvektor von $\gamma$ \\
+	Hat $\gamma$ konstante Geschwindigkeit 1, so ist die Kr"ummung $K$ zur Stelle $s$ definiert als: \\
+	$K(s) = || \lim\limits_{\Delta s \to 0} \frac{T(s + \Delta s) - T(s)}{\Delta s} || = || T'(s) ||$ \\
+	Sei $N(t) := DT(t)$, mit $D =$ "Rotation um 90°", Normaleneinheitsvektor. \\
+	Ist $\gamma$ zweimal stetig diffbar mit Geschwindigkeit 1, dann ist:
+	$K(s) = \langle T'(s), N(s) \rangle, \quad | K(s) | = || T'(s) ||$ \\
+	Falls $\gamma = (x,y)$, gilt $K(t) = \frac{\dot{x}\ddot{y} - \dot{y}\ddot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}^3} (t)$ \\
+	Falls $\gamma = (x, f(x))$ gilt $K(x) = \frac{f''(x)}{\sqrt{1+f'^2(x)}^3}$ \\
+	Kr"ummungsradius $\rho (t) := \frac{1}{K(t)}$ \\
+	Kr"ummungsmittelpunkt $m(t) := \gamma(t) + \rho(t)N(t)$
 
 
 
