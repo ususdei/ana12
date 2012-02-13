@@ -204,6 +204,36 @@ andere Normen
 \subsubsection{Lemma}
 \subsubsection{Korollar}
 
+
+\subsection{Mehrdimensionales Ableiten}
+	Def.: $U \in \menge{R}^n$ offen, \quad $f:U \to \menge{R}^m$ \\
+	$f$ heißt diffbar in $x \in U \Leftrightarrow \exists$ lin. Abb. $A: U \to \menge{R}^m \quad A \in \menge{R}^{m \times n}$ mit
+	$f(x+h) = f(x) + A(x)h + o(||h||) \rightarrow f(x+h) = f(x) + A(x)h$ \\
+	$A$ ist durch $f$ eindeutig bestimmt aber abh"angig von $x$.\\ $A$ heißt Jakobimatrix. $A(x) := J_f(x) =: Df(x)$
+	\begin{itemize}
+	\item $m,n$ beliebig: $A(x) = \begin{pmatrix}
+			\frac{\partial f_1}{\partial x_1} 	& \cdots 	& \frac{\partial f_1}{\partial x_n} \\
+			\vdots					& \ddots	& \vdots	\\
+			\frac{\partial f_m}{\partial x_1}	& \cdots	& \frac{\partial f_m}{\partial x_n}
+		\end{pmatrix} = \begin{pmatrix}
+			(\nabla f_1)^T \\
+			\vdots \\
+			(\nabla f_m)^T
+		\end{pmatrix}$
+	\item $m = 1, n \in \menge{N}$ \\
+		$A(x) = (\nabla f(x))^T = \left ( \frac{\partial f}{\partial_1}, \cdots, \frac{\partial f}{partial_n} \right )$ \\
+		Falls $f$ stetig partiall diffbar ist $\Rightarrow f$ ist diffbar. \\
+		$D^2 f(x) = \begin{pmatrix}
+			\frac{partial^2 f}{\partial x_1 \partial x_1} 	& \cdots	& \frac{partial^2 f}{\partial x_1 \partial x_n} \\
+			\vdots						& \ddots	& \vdots	\\
+			\frac{partial^2 f}{\partial x_n \partial x_1} 	& \cdots	& \frac{partial^2 f}{\partial x_n \partial x_n}
+		\end{pmatrix}$ \\
+		$D^2 f = H_f$ ist eine symmetrische $n \times n$-Matrix und heißt Hesse-Matrix.
+	\end{itemize}
+
+
+
+
 \section{Integral}
 Defs.:  \dots \\
 Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckweise stetig, dann ist $f$ Riemann integrierbar.
