@@ -233,7 +233,14 @@ andere Normen
 		(Schreibweise: $s = \sum\limits_{k=1}^{\infty} a_k = a_1 + a_2 + \dots$). 
 		$s$ heißt Summe oder Wert der Reihe $(s_n)$.
 		Wenn $s_n \to \pm \infty$, schreiben wir auch 
-		$\sum\limits_{k=1}^{\infty} a_k = \pm \infty$.
+		$\sum\limits_{k=1}^{\infty} a_k = \pm \infty$.\\
+		\subsubsection{Notwendige Bedingung für Konvergenz}
+			$\sum\limits_{k=1}^{\infty} a_k = s 
+			\qquad \Rightarrow \qquad 
+			a_k \to 0 (n \to \infty)$
+		\subsubsection{Reihen mit nichtnegativen Gliedern}
+			$(s_n)$ mit $s_n = \sum\limits_{k=1}^{n} a_k$ mit $a_k \geq 0$ konvergiert 
+			($\sum\limits_{k=1}^{\infty} a_k < \infty$) $\Leftrightarrow (s_n) $ beschränkt.
 		\subsubsection{Beispiele}
 			\begin{itemize}
 				\item Teleskopreihe: $ \sum\limits_{k=1}^{\infty} \frac{1}{k(k+1)}  = 1$
@@ -243,17 +250,41 @@ andere Normen
 			\end{itemize}
 	\subsection{Vergleichskriterien}
 		\subsubsection{Majorantenkriterium}
+			Seien $\left( \sum\limits_{k=1}^{n} a_k \right) \subset \C$ 
+			und $\left( \sum\limits_{k=1}^{n} b_k \right) \subset \R$ Reihen mit 
+			$|a_k| \leq b_k$. Die Reihe $\left( \sum\limits_{k=1}^{n} b_k \right)$
+			heißt dann \textbf{Majorante} der $\left( \sum\limits_{k=1}^{n} a_k \right)$ 
+			und es gilt:
+			\begin{enumerate}
+				\item konvergiert $\left( \sum\limits_{k=1}^{n} b_k \right)$,
+					so konvergiert auch $\left( \sum\limits_{k=1}^{n} a_k \right)$ und es
+					gilt: $\left| \sum\limits_{k=1}^{\infty} a_k \right|
+					\quad \leq \quad \sum\limits_{k=1}^{\infty} |a_k| 
+					\quad \leq \quad \sum\limits_{k=1}^{\infty} b_k$
+				\item Divergiert $\left( \sum\limits_{k=1}^{n} a_k \right)$, so auch
+					$\left( \sum\limits_{k=1}^{n} b_k \right)$ 
+			\end{enumerate}
 		\subsubsection{Quotientenkriterium}
+			Sei $\left( \sum\limits_{k=1}^{n} a_k \right) \subset \C$ eine Reihe mit 
+			$a_k \neq 0 \, \forall \, k \geq k_0$. Existiert der Grenzwert 
+			$q := \lim\limits_{n \to \infty} \left| \frac{a_k+1}{a_k} \right|$, so 
+			konvergiert die Reihe, falls $q < 1$ und sie divergiert für $q > 1$. Für $q=1$
+			lässt sich nichts aussagen.
 		\subsubsection{Wurzelkriterium}
+			Für die Reihe $\left( \sum\limits_{k=1}^{n} a_k \right)$ definieren wir die Zahl
+			$\rho := \limsup\limits_{k \to \infty} \sqrt[k]{|a_k|} $. Die Reihe konvergiert
+			falls $\rho < 1$ und sie divergiert, falls $\rho > 1$. Für $\rho = 1$ lässt sich 
+			nichts sagen.
 
 \section{Konsequenzen der Stetigkeit}
-\subsection{Zwischenwertsatz} 
-\subsection{Existenz von Maximum und Minimum}
-$K \neq \emptyset$ aus $\R$ kompakt (abgeschlossen \& beschränkt) besitzt Max und Min.\\
-$K$ Kompakt, $f$ stetig $\Rightarrow f(K) $ kompakt.\\
-Jede \emph{stetige} Funktion $f: K \in \R^d$ mit Definitionsbereich $\emptyset \neq K$ \emph{kompakt} nimmt ihr Maximum und Minimum an.
-\subsubsection{Lemma}
-\subsubsection{Korollar}
+	\subsection{Zwischenwertsatz} 
+	\subsection{Existenz von Maximum und Minimum}
+	$K \neq \emptyset$ aus $\R$ kompakt (abgeschlossen \& beschränkt) besitzt Max und Min.\\
+	$K$ Kompakt, $f$ stetig $\Rightarrow f(K) $ kompakt.\\
+	Jede \emph{stetige} Funktion $f: K \in \R^d$ mit Definitionsbereich $\emptyset \neq K$
+	\emph{kompakt} nimmt ihr Maximum und Minimum an.
+		\subsubsection{Lemma}
+		\subsubsection{Korollar}
 
 
 
@@ -384,7 +415,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 		\item $f$ analytisch, $f(0) \neq 0 \Rightarrow \frac{1}{f}$ analytisch
 	\end{itemize}
 \subsection{wichtige Potenzreihen}
-	$e^x = \sum\limits_{k=0}^\infty \frac{x^k}{k!} \quad x ~in \R$ \\
+	$e^x = \sum\limits_{k=0}^\infty \frac{x^k}{k!} \quad x \in \R$ \\
 	$\sin x = \sum\limits_{k=0}^\infty (-1)^k \frac{x^{2k+1}}{(2k+1)!} \quad x \in \R$ \\
 	$\cos x = \sum\limits_{k=0}^\infty (-1)^k \frac{x^{2k}}{(2k)!} \quad x \in \R$ \\
 	$\ln (1+x) = \sum\limits_{k=0}^\infty (-1)^k \frac{x^{k+1}}{k+1} \quad |x| < 1$\\
