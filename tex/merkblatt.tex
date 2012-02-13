@@ -152,7 +152,18 @@ andere Normen
 	\end{tabular}
 	\end{center}
 	Summe, Produkt, Quotient zweier konvergenter Folgen ist konvergent. Für
-	divergente/uneigentlich konvergente Folgen gilt das nicht.
+	divergente/uneigentlich konvergente Folgen gilt das nicht.\\
+	\\
+	\begin{itemize}
+	\item Polynome (in $\mathbb{C}$ und $\mathbb{R}$) sind stetig auf ganz $\mathbb{C}$ 
+	bzw. $\mathbb{R}$.
+	\item $\max(a,b) = \frac{a + b + |a-b|}{2}$ und $\min(a,b) = \frac{a+b - |a-b|}{2}$ 
+	sind stetig auf $\mathbb{R}^2$, bzw. die entsprechenden Funktionen auch in 
+	höherdimensionalen Räumen.
+	\item Als Konsequenz sind auch Normen stetig.
+	\end{itemize}
+	
+	
 	\subsubsection{Stetigkeit der Verknüpfung von Funktionen}
 		Sei $f : D \subseteq \mathbb{R}^d \to \mathbb{R}^q$, 
 		$g : E \subseteq \mathbb{R}^q \to \mathbb{R}^p$ mit 
@@ -162,6 +173,16 @@ andere Normen
 		Dann gilt: Wenn $f$ stetig in $x \in D$ und $g$ stetig $f(x) \in E$\\
 		$\Rightarrow g \circ f$ stetig in $x \in D$
 \subsection{Monotone Folgen}
+	$(a_n)_{n \in \mathbb{N}}$ monoton wachsend $\Leftrightarrow a_n \leq a_{n+1} 
+	\, \forall n \in \mathbb{N}$\\
+	$(a_n)_{n \in \mathbb{N}}$ monoton fallend $\Leftrightarrow a_n \geq a_{n+1} 
+	\, \forall n \in \mathbb{N}$\\
+	Strenge Monotonie gilt, falls statt $\leq, \geq$ echte Ungleichheit gilt.\\
+	\subsubsection{Satz}
+		Jede beschränkte, monotone Folge $(a_n)_{n \in \mathbb{N}} \subset \mathbb{R}$
+		ist konvergent.
+		Jede unbeschränkte, monotone Folge $(a_n)  \subset \mathbb{R}$ konvergiert 
+		uneigentlich.
 \subsection{Beschränkte Folgen}
 \subsubsection{Satz von Bolzano-Weierstrass}
 \subsubsection{Lemma Seite 6/14, VL 6}
@@ -206,7 +227,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 \section{Potenzreihe}
 	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
 	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) = \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
-	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{limsup \sqrt[n]{|a_n|}}$. \\
+	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{\limsup \sqrt[n]{|a_n|}}$. \\
 	Welche Funktionen $f$ haben die Darstellung $f(x) = \sum\limits_{k=0}^\infty a_kx^k \quad \forall x \in (-r,r) \rightarrow$ \underline{Taylorentwicklung} \\
 	$f: \menge{I} \rightarrow \menge{R}, \menge{I} = (a,b) \quad f (n+1)$-mal stetig diffbar, dann: \\
 	$\forall x,a \in \menge{I}: (x) = \underbrace{ \sum\limits_{k=0}^{n} \frac{f^{(k)} (a)}{k!}(x-a)^k }_{\text{Taylorpolynom n-ten Grades von f um a}} + R_{n+1}(a,x)$ \\
@@ -215,8 +236,8 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 		\frac{f^{(n+1)}(\xi)}{(n+1)!} (x-a)^{n+1} \quad \xi \in [x,a]
 	\end{cases}$ \\
 	falls f $\infty$-mal diffbar, $R_{n+1}(x) \rightarrow 0 (n \rightarrow \infty)
-	\Rightarrow f(x) = \sum\limits_{k=0}^\infty \frac{f^k(a)}{k!} (x-a)^k$ \quad (Taylorreihe von f um a) \\
-	$f:\menge{R} \rightarrow \menge{R}$ heißt analytisch in $x=0$, falls f als $f(x) = \sum\limits_{k=0}^\infty a_k^xk \quad \forall |x| < r$ darstellbar ist.
+	\Rightarrow f(x) = \sum\limits_{k=0}^\infty \frac{f^{(k)}(a)}{k!} (x-a)^k$ \quad (Taylorreihe von f um a) \\
+	$f:\menge{R} \rightarrow \menge{R}$ heißt analytisch in $x=0$, falls f als $f(x) = \sum\limits_{k=0}^\infty a_k x_k \quad \forall |x| < r$ darstellbar ist.
 	\begin{itemize}
 		\item $f \in C^\infty((-r,r))$
 		\item $f$ analytisch, $g$ analytisch $\Rightarrow f \circ g$ analytisch mit
