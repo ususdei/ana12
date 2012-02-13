@@ -237,6 +237,55 @@ andere Normen
 \subsubsection{Korollar}
 
 
+\subsection{Mehrdimensionales Ableiten}
+	Def.: $U \in \menge{R}^n$ offen, \quad $f:U \to \menge{R}^m$ \\
+	$f$ heißt diffbar in $x \in U \Leftrightarrow \exists$ lin. Abb. $A: U \to \menge{R}^m \quad A \in \menge{R}^{m \times n}$ mit
+	$f(x+h) = f(x) + A(x)h + o(||h||) \rightarrow f(x+h) = f(x) + A(x)h$ \\
+	$A$ ist durch $f$ eindeutig bestimmt aber abh"angig von $x$.\\ $A$ heißt Jakobimatrix. $A(x) := J_f(x) =: Df(x)$
+	\begin{itemize}
+	\item $m,n$ beliebig: $A(x) = \begin{pmatrix}
+			\frac{\partial f_1}{\partial x_1} 	& \cdots 	& \frac{\partial f_1}{\partial x_n} \\
+			\vdots					& \ddots	& \vdots	\\
+			\frac{\partial f_m}{\partial x_1}	& \cdots	& \frac{\partial f_m}{\partial x_n}
+		\end{pmatrix} = \begin{pmatrix}
+			(\nabla f_1)^T \\
+			\vdots \\
+			(\nabla f_m)^T
+		\end{pmatrix}$
+	\item $m = 1, n \in \menge{N}$ \\
+		$A(x) = (\nabla f(x))^T = \left ( \frac{\partial f}{\partial_1}, \cdots, \frac{\partial f}{partial_n} \right )$ \\
+		Falls $f$ stetig partiall diffbar ist $\Rightarrow f$ ist diffbar. \\
+		$D^2 f(x) = \begin{pmatrix}
+			\frac{partial^2 f}{\partial x_1 \partial x_1} 	& \cdots	& \frac{partial^2 f}{\partial x_1 \partial x_n} \\
+			\vdots						& \ddots	& \vdots	\\
+			\frac{partial^2 f}{\partial x_n \partial x_1} 	& \cdots	& \frac{partial^2 f}{\partial x_n \partial x_n}
+		\end{pmatrix}$ \\
+		$D^2 f = H_f$ ist eine symmetrische $n \times n$-Matrix und heißt Hesse-Matrix.
+	\end{itemize}
+
+
+
+
+\section{Integral}
+Defs.:  \dots \\
+Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckweise stetig, dann ist $f$ Riemann integrierbar.
+\underline{Hauptsatz der Differential und Integralrechnung} \\
+	Sei $f:[a,b] \rightarrow \menge{R} stetig, c \in [a,b]$ fest, dann $\quad F(x) := \int\limits_c^x f(y) \d y$
+	\begin{enumerate}
+	\item stetig diffbar
+	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
+	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
+	\end{enumerate}
+\subsection{Substitution}
+	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
+	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
+	$x = g^{-1}(y) \Leftrightarrow y=g(x) \quad \frac{\d y}{\d x} = g'(x)$
+\subsection{uneigentliche Integrale}
+	Sei $f:[a,b] \rightarrow \menge{R}$ integrierbar $\forall [\alpha, \beta], a \leq \alpha < \beta < b$ \\
+	$ \Rightarrow \int\limits_a^b f(x) \d x = \lim\limits_{\beta \to b} \int\limits_a^\beta f(x) \d x$
+
+
+
 \section{Potenzreihe}
 	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
 	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) = \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
