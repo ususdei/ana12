@@ -250,40 +250,41 @@ andere Normen
 				\item $\sum\limits_{k=1}^{\infty} \frac{1}{k^2}$ konvergiert nach 
 				Majoratenkriterium.
 			\end{itemize}
+
 	\subsection{Konvergenzkriterien}
 		\subsubsection{Majorantenkriterium}
-			Seien $\left( \sum\limits_{k=1}^{n} a_k \right) \subset \C$ 
-			und $\left( \sum\limits_{k=1}^{n} b_k \right) \subset \R$ Reihen mit 
-			$|a_k| \leq b_k$. Die Reihe $\left( \sum\limits_{k=1}^{n} b_k \right)$
-			heißt dann \textbf{Majorante} der $\left( \sum\limits_{k=1}^{n} a_k \right)$ 
-			und es gilt:
-			\begin{enumerate}
-				\item konvergiert $\left( \sum\limits_{k=1}^{n} b_k \right)$,
-					so konvergiert auch $\left( \sum\limits_{k=1}^{n} a_k \right)$ und es
-					gilt: $\left| \sum\limits_{k=1}^{\infty} a_k \right|
+			Seien $( \sum\limits_{k=1}^n a_k) \in \C$ und 
+			$( \sum\limits_{k=1}^n b_k) \in \R$ Reihen mit $|a_k| \leq b_k$.\\
+			$( \sum\limits_{k=1}^n b_k)$ heißt Majorante von 
+			$( \sum\limits_{k=1}^n a_k)$ und es gilt:
+			\begin{itemize}
+				\item $( \sum\limits_{k=1}^n b_k)$ konvergiert 
+				$\Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+				\item $( \sum\limits_{k=1}^n a_k)$ divergiert 
+				$\Rightarrow ( \sum\limits_{k=1}^n b_k)$ divergiert
+				\item $\left| \sum\limits_{k=1}^{\infty} a_k \right|
 					\quad \leq \quad \sum\limits_{k=1}^{\infty} |a_k| 
 					\quad \leq \quad \sum\limits_{k=1}^{\infty} b_k$
-				\item Divergiert $\left( \sum\limits_{k=1}^{n} a_k \right)$, so auch
-					$\left( \sum\limits_{k=1}^{n} b_k \right)$ 
-			\end{enumerate}
+			\end{itemize}
 		\subsubsection{Quotientenkriterium}
-			Sei $\left( \sum\limits_{k=1}^{n} a_k \right) \subset \C$ eine Reihe mit 
-			$a_k \neq 0 \, \forall \, k \geq k_0$. Existiert der Grenzwert 
-			$q := \lim\limits_{n \to \infty} \left| \frac{a_k+1}{a_k} \right|$, so 
-			konvergiert die Reihe, falls $q < 1$ und sie divergiert für $q > 1$. Für $q=1$
-			lässt sich nichts aussagen.
+			$( \sum\limits_{k=1}^n a_k) \in \C$ und $a_k \neq 0 \quad \forall k \leq k_0$
+			mit Grenzwert $ q:= \lim_{k \to \infty} |\frac{a_{k+1}}{a_k}|$
+			\begin{itemize}
+			\item $q < 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+			\item $q > 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
+			\item $q = 1 \Rightarrow $ keine Aussage möglich 
+			\end{itemize}
 		\subsubsection{Wurzelkriterium}
-			Für die Reihe $\left( \sum\limits_{k=1}^{n} a_k \right)$ definieren wir die Zahl
-			$\rho := \limsup\limits_{k \to \infty} \sqrt[k]{|a_k|} $. Die Reihe konvergiert
-			falls $\rho < 1$ und sie divergiert, falls $\rho > 1$. Für $\rho = 1$ lässt sich 
-			nichts sagen.
+			$(\sum\limits_{k=1}^n a_k)$ mit 
+			$\rho := \limsup_{k \to \infty} \sqrt[k]{|a_n|} $
+			\begin{itemize}
+				\item $\rho < 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+				\item $\rho > 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
+				\item $\rho = 1 \Rightarrow $ keine Aussage möglich 
+			\end{itemize}
 		\subsubsection{Leibnizsches Konvergenzkriterium}
-			Sei $(a_n) \subset \R$ eine \textit{monoton fallende Nullfolge}. Dann konvergiert
-			die zugehörige alternierende Reihe
-			$ \sum\limits_{k=0}^{\infty} (-1)^k a_k = s $ und die Partialsumme $s_n$
-			approximiert den Reihenwert $s$ bis auf einen Fehler, der höchstens so groß ist,
-			wie der Betrag des ersten, weggelassenen Summanden.
-			$ \left| \sum\limits_{k=n+1}^{\infty} (-1)^k a_k  \right| \leq a_{n+1} $
+			$(a_n) \in \R$ und $(a_n)$ ist eine \textit{monoton fallende Nullfolge}\\
+			$ \Rightarrow \sum\limits_{k=0}^ \infty (-1)^k a_k = s \quad$ konvergiert.
 		\subsubsection{Praktische Tipps zur Untersuchung der Konvergenz}
 			\begin{enumerate}
 			\item Bekannte Beispiele kennen
@@ -294,32 +295,6 @@ andere Normen
 			\item Wende Wurzelkriterium an
 			\item Alternierende Reihe? 
 			\end{enumerate}
-
-
-\subsection{Vergleichskriterien die zweite xD}
-	\subsubsection{Majorantenkriterium}
-		Seien $( \sum\limits_{k=1}^n a_k) \in \C$ und $( \sum\limits_{k=1}^n b_k) \in \R$ Reihen mit $|a_k| \leq b_k$.\\
-		$( \sum\limits_{k=1}^n b_k)$ heißt Majorante von $( \sum\limits_{k=1}^n a_k)$ und es gilt:
-		\begin{itemize}
-		\item $( \sum\limits_{k=1}^n b_k)$ konvergiert  $\Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
-		\item $( \sum\limits_{k=1}^n a_k)$ divergiert $\Rightarrow ( \sum\limits_{k=1}^n b_k)$ divergiert
-		\end{itemize}
-	\subsubsection{Quotientenkriterium}
-		$( \sum\limits_{k=1}^n a_k) \in \C$ und $a_k \neq 0 \quad \forall k \leq k_0$ mit Grenzwert $ q:= \lim_{k \to \infty} |\frac{a_{k+1}}{a_k}|$
-		\begin{itemize}
-		\item $q <1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
-		\item $q >1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
-		\item $q <1 \Rightarrow $ keine Aussage möglich 
-		\end{itemize}
-	\subsubsection{Wurzelkriterium}
-	$(\sum\limits_{k=1}^n a_k)$ mit $\rho := \limsup_{k \to \infty} \sqrt[k]{|a_n|} $
-	\begin{itemize}
-	\item $\rho <1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
-	\item $\rho >1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
-	\item $\rho <1 \Rightarrow $ keine Aussage möglich 
-	\end{itemize}
-	\subsubsection{Leibnizsches Konvergenzkriterium}
-		$(a_n) \in R$ und $(a_n)$ ist monoton fallende Nullfolge $ \Rightarrow \sum\limits_{k=0}^ \infty (-1)^k a_k = s \quad$ konvergiert
 
 	\subsection{Reihenumordnung}
 		\subsubsection{Absolute Konvergenz}
