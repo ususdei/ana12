@@ -294,6 +294,33 @@ andere Normen
 			\item Wende Wurzelkriterium an
 			\item Alternierende Reihe? 
 			\end{enumerate}
+
+
+\subsection{Vergleichskriterien die zweite xD}
+	\subsubsection{Majorantenkriterium}
+		Seien $( \sum\limits_{k=1}^n a_k) \in \C$ und $( \sum\limits_{k=1}^n b_k) \in \R$ Reihen mit $|a_k| \leq b_k$.\\
+		$( \sum\limits_{k=1}^n b_k)$ heißt Majorante von $( \sum\limits_{k=1}^n a_k)$ und es gilt:
+		\begin{itemize}
+		\item $( \sum\limits_{k=1}^n b_k)$ konvergiert  $\Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+		\item $( \sum\limits_{k=1}^n a_k)$ divergiert $\Rightarrow ( \sum\limits_{k=1}^n b_k)$ divergiert
+		\end{itemize}
+	\subsubsection{Quotientenkriterium}
+		$( \sum\limits_{k=1}^n a_k) \in \C$ und $a_k \neq 0 \quad \forall k \leq k_0$ mit Grenzwert $ q:= \lim_{k \to \infty} |\frac{a_{k+1}}{a_k}|$
+		\begin{itemize}
+		\item $q <1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+		\item $q >1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
+		\item $q <1 \Rightarrow $ keine Aussage möglich 
+		\end{itemize}
+	\subsubsection{Wurzelkriterium}
+	$(\sum\limits_{k=1}^n a_k)$ mit $\rho := \limsup_{k \to \infty} \sqrt[k]{|a_n|} $
+	\begin{itemize}
+	\item $\rho <1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
+	\item $\rho >1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
+	\item $\rho <1 \Rightarrow $ keine Aussage möglich 
+	\end{itemize}
+	\subsubsection{Leibnizsches Konvergenzkriterium}
+		$(a_n) \in R$ und $(a_n)$ ist monoton fallende Nullfolge $ \Rightarrow \sum\limits_{k=0}^ \infty (-1)^k a_k = s \quad$ konvergiert
+
 	\subsection{Reihenumordnung}
 		\subsubsection{Absolute Konvergenz}
 			Sei $(a_n) \subset \C$.
@@ -409,6 +436,8 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
 	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
 	\end{enumerate}
+\subsection{partielle Integration}
+	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$
 \subsection{Substitution}
 	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
 	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
