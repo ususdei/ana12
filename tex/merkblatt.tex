@@ -152,7 +152,18 @@ andere Normen
 	\end{tabular}
 	\end{center}
 	Summe, Produkt, Quotient zweier konvergenter Folgen ist konvergent. Für
-	divergente/uneigentlich konvergente Folgen gilt das nicht.
+	divergente/uneigentlich konvergente Folgen gilt das nicht.\\
+	\\
+	\begin{itemize}
+	\item Polynome (in $\mathbb{C}$ und $\mathbb{R}$) sind stetig auf ganz $\mathbb{C}$ 
+	bzw. $\mathbb{R}$.
+	\item $\max(a,b) = \frac{a + b + |a-b|}{2}$ und $\min(a,b) = \frac{a+b - |a-b|}{2}$ 
+	sind stetig auf $\mathbb{R}^2$, bzw. die entsprechenden Funktionen auch in 
+	höherdimensionalen Räumen.
+	\item Als Konsequenz sind auch Normen stetig.
+	\end{itemize}
+	
+	
 	\subsubsection{Stetigkeit der Verknüpfung von Funktionen}
 		Sei $f : D \subseteq \mathbb{R}^d \to \mathbb{R}^q$, 
 		$g : E \subseteq \mathbb{R}^q \to \mathbb{R}^p$ mit 
@@ -162,6 +173,16 @@ andere Normen
 		Dann gilt: Wenn $f$ stetig in $x \in D$ und $g$ stetig $f(x) \in E$\\
 		$\Rightarrow g \circ f$ stetig in $x \in D$
 \subsection{Monotone Folgen}
+	$(a_n)_{n \in \mathbb{N}}$ monoton wachsend $\Leftrightarrow a_n \leq a_{n+1} 
+	\, \forall n \in \mathbb{N}$\\
+	$(a_n)_{n \in \mathbb{N}}$ monoton fallend $\Leftrightarrow a_n \geq a_{n+1} 
+	\, \forall n \in \mathbb{N}$\\
+	Strenge Monotonie gilt, falls statt $\leq, \geq$ echte Ungleichheit gilt.\\
+	\subsubsection{Satz}
+		Jede beschränkte, monotone Folge $(a_n)_{n \in \mathbb{N}} \subset \mathbb{R}$
+		ist konvergent.
+		Jede unbeschränkte, monotone Folge $(a_n)  \subset \mathbb{R}$ konvergiert 
+		uneigentlich.
 \subsection{Beschränkte Folgen}
 \subsubsection{Satz von Bolzano-Weierstrass}
 \subsubsection{Lemma Seite 6/14, VL 6}
