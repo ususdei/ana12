@@ -262,6 +262,37 @@ andere Normen
 		\end{itemize}
 	\end{itemize}
 
+
+\subsection{Anwendung der Ableitungen}
+	$f:[a,b] \to \I$ hat bei $x_0 \in [a,b]$ ein
+	\begin{itemize}
+	\item glob Max $\Leftrightarrow f(x) = f(x_0) \quad \forall x \in [a,b]$
+	\item lok Max $\Leftrightarrow \exists \epsilon >0: \forall x \in (x_0-\epsilon, x_0+\epsilon) \cap [a,b]: f(x) \leq f(x_0)$
+	\end{itemize}
+	Notwendige Bedingung f"ur lokale Maxima: \\
+	$f[a,b] \to \R ($diffbar in $x_0)$, ist $x_0 \in (a,b)$ lok Extremum $\Rightarrow f'(x_0) = 0$ \\
+	Hinreichende Bedingung: \\
+	$f: (a,b) \to \R \ 2 \times$ diffbar in $x_0 \in (a,b)$ mit $f'(x_0) = 0$
+	\begin{itemize}
+	\item $f''(x_0) < 0 \Rightarrow f$ lokales Maximum in $x_0$
+	\item $f''(x_0) > 0 \Rightarrow f$ lokales Minimum in $x_0$
+	\item $f''(x_0) = 0 \Rightarrow$ keine Aussage direkt möglich.
+	\end{itemize}
+
+\subsection{Regel von L'Hospital}
+	$f,g: (a,b) \to \R$ diffbar, $a,b \in \R \cup \{\pm \infty\}$ \\
+	Sei $x_0 \in (a,b)$ und gilt \\
+	entweder $f(x), g(x) \to \infty$ f"ur $x \to x_0$  \\
+	oder $f(x),g(x) \to 0$ f"ur $x \to x_0$ \\
+	$ \Rightarrow \lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)} \in \R$
+
+\subsection{Konvexit"at}
+	Mengen: $D \in \R^n$ ist konvex $\Leftrightarrow \forall x,y \in D \ [x,y] \in D$ \\ 
+	$[ x, y ] = \{\lambda x + (1- \lambda)y | \lambda \in [0,1] \}$ \\
+	Funktionen: $D \subseteq \R^n$ konvex \\
+	$f: D \to \R$ konvex 	$\Leftrightarrow f(\lambda x + (1-\lambda)y) \leq \lambda f(x) + (1 - \lambda ) f(y)$\\
+	$f(a,b) \to \R \ 2 \times$ stetig diffbar.  $f$ konvex $\Leftrightarrow f''(x) \geq 0$
+
 \subsection{Mehrdimensionales Ableiten}
 	Def.: $U \in \menge{R}^n$ offen, \quad $f:U \to \menge{R}^m$ \\
 	$f$ heißt diffbar in $x \in U \Leftrightarrow \exists$ lin. Abb. $A: U \to \menge{R}^m \quad A \in \menge{R}^{m \times n}$ mit
