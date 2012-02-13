@@ -436,7 +436,24 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 \subsection{uneigentliche Integrale}
 	Sei $f:[a,b] \rightarrow \menge{R}$ integrierbar $\forall [\alpha, \beta], a \leq \alpha < \beta < b$ \\
 	$ \Rightarrow \int\limits_a^b f(x) \d x = \lim\limits_{\beta \to b} \int\limits_a^\beta f(x) \d x$
-
+\subsection{Integralkriterium}
+	F"ur $f: [1,\infty) \to [0, \infty )$ monoton fallend gilt: \\
+	$0 \leq \lim\limits_{n \to \infty} ( \underbrace{\sum\limits_{k=1}^n f(k)}_{b_n} - \underbrace{\int\limits_1^{n+1} f(x) \d x}_{c_n} ) \leq f(1)$ \\
+	$\Rightarrow \sum\limits_{n=1}^\infty f(n) < \infty \Leftrightarrow \int\limits_1^\infty f(x) \d x < \infty$
+\subsection{mehrdimensionale Integrale}
+\subsubsection{"uber Quader $Q \in \R^n$}
+	$\int\limits_Q f(x_1,\dots,x_n) \d x_1 \dots \d x_n = 
+	\int\limits_{a_n}^{b_n} \dots \int\limits_{a_2}^{b_1} ( \int\limits_{a_1}^{b_1} f(x_1,\dots,x_n) \d x_1 ) \d x_2) \dots \d x_n$ \\
+	kurz: $\int\limits_Q f(x) \d^n x$ oder $\int\limits_Q f(x) \d x$ \\
+	Tr"ager von f: $Supp(f) = \overline{\{x \in \R^n : f(x) \neq 0\}}$ Im Folgende seien die Tr"ager aller Funktionen kompakt. \\
+	Charakteristische Funktion $\chi_K$ einer kompakten Menge $K \subset \R^n:
+	X_K(x) = \begin{cases}1, \text{  falls } x \in K \\ 0,  \text{   falls } x \in \R^n \setminus K.\end{cases}$ \\
+	Volumen von $K$:  $Vol(K) := \int\limits_{\R^n} \chi_K(x) \d^n x \quad \in \R_+  \entspr \quad \int\limits_K 1 \ \d^n x$
+\subsubsection{"uber beliebige stetige Funktionen mit kompakten Tr"ager}
+	Sei $ \in \R^{n \times n}$ invertierbar: $A\int\limits_{\R^n} f(Ax) |det A| d^n x = \int\limits_{\R^n} f(y) d^n y$ \\
+	Transformationssatz: Seien $U,V \subset \R^n$ offene Mengen und $\phi: U \to V$ stetig diffbar mit $\phi^{-1} : V \to U$ stetig diffbar.
+	Dann gilt f"ur alle stetigen Funktionen f mit kompaktem Tr"ager in V: \\
+	$\int\limits_U f(\phi(x)) \cdot \big| \det D \phi(x) \big| d^nx = \int\limits_V f(y) d^n y$
 
 
 \section{Potenzreihe}
