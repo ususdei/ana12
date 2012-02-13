@@ -1,5 +1,5 @@
 \documentclass[10pt,a4paper^, twocolumn]{article}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -24,6 +24,9 @@
 \renewcommand{\phi}{\varphi} % *das* phi!
 \newcommand{\pivot}{{\fboxsep1pt \fbox{$\ast$}}} % pivot-element in stufen-matrix
 \renewcommand{\d}{\mathrm{d}} % d/dx schreiben als \frac{\d}{\d x}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
 
 
 %%% neue befehle -- bitte benutzen ;-)
@@ -87,20 +90,20 @@ andere Normen
 
 \section{Folgen}
 \subsection{Konvergenz von Folgen}
-	Die Folge $(a_n)$ konvergiert gegen den Grenzwert $a \in \mathbb{R}$, falls für
+	Die Folge $(a_n)$ konvergiert gegen den Grenzwert $a \in \R$, falls für
 	jede Genauigkeit $\epsilon > 0$ die Abschätzung $|a_n - a| \leq \epsilon$ für fast
-	alle $n \in \mathbb{N}$ eingehalten wird.
+	alle $n \in \N$ eingehalten wird.
 \subsubsection{Monotonie der Grenzwertbildung}
 	Es seien $a_n \to a$ und $b_n \to b$.\\
-	Gilt $a_n \leq b_n \, \forall n \geq n_0 \in \mathbb{N}$, dann gilt $ a \leq b$.
+	Gilt $a_n \leq b_n \, \forall n \geq n_0 \in \N$, dann gilt $ a \leq b$.
 \subsubsection{Einschließungsregel}
-	Es sei $\forall \, n \geq n_0 \in \mathbb{N} : \, a_n \leq a_n' \leq a_n''$.
+	Es sei $\forall \, n \geq n_0 \in \N : \, a_n \leq a_n' \leq a_n''$.
 	Dann gilt 
 	$$\lim_{n \to \infty} a_n = \lim_{n \to \infty} a_n'' = a 
 	\qquad \Rightarrow  \qquad \lim_{n \to \infty} a_n' = a$$
-\subsubsection{Konvergenz in $\mathbb{R}^d$ und $\mathbb{C}$}
+\subsubsection{Konvergenz in $\R^d$ und $\mathbb{C}$}
 	Die vektorwertige Folge\\
-	$\mathbb{N} \ni n \mapsto x_n = 
+	$\N \ni n \mapsto x_n = 
 		\begin{pmatrix}
 			x_{n_1}\\
 			\vdots \\
@@ -116,14 +119,14 @@ andere Normen
 		\lim_{n \to \infty} x_{n_k} = x_k 
 		\quad \forall k \in \{1, \dots, d \} 
 		\text{(komponentenweise Grenzwerte existieren)}$$
-	Analog in $\mathbb{C}$ (isomorph zu $\mathbb{R}^2$).
+	Analog in $\mathbb{C}$ (isomorph zu $\R^2$).
 \subsection{Beschränktheit konvergenter Folgen}
-	Eine konvergente Folge $(a_n) \subset \mathbb{R}$ ist beschränkt.\\
-	D.h. $\exists c > 0 $ mit $|a_n| \leq c \forall n \in \mathbb{N}$.\\
-	Das gleiche gilt für Folgen aus  $\mathbb{R}^d$ und $\mathbb{C}$ mit $||\cdot||_2$
+	Eine konvergente Folge $(a_n) \subset \R$ ist beschränkt.\\
+	D.h. $\exists c > 0 $ mit $|a_n| \leq c \forall n \in \N$.\\
+	Das gleiche gilt für Folgen aus  $\R^d$ und $\mathbb{C}$ mit $||\cdot||_2$
 	bzw. dem Absolutbetrag in $\mathbb{C}$.
 \subsection{Stetigkeit: Rechnen mit Grenzwerten}
-	Eine Funktion $f : D \subseteq \mathbb{R}^d \to \mathbb{R}^q$ heißt 
+	Eine Funktion $f : D \subseteq \R^d \to \R^q$ heißt 
 	im Punkt $x \in D$ ihres Definitionsbereichs stetig, falls für jede Folge 
 	$(x_n)$ aus $D$ gilt:
 	$$
@@ -137,17 +140,17 @@ andere Normen
 	\newcommand{\aufsichtwidth}{10cm}
 	\begin{tabular}{|c|c|}
 	\hline
-	$D \subseteq \mathbb{R}$ &  $f(x) \in \mathbb{R}$ \\
+	$D \subseteq \R$ &  $f(x) \in \R$ \\
 	\hline
-	$\mathbb{R}$ & $f(x) = c, c \in \mathbb{R}$\\
-	$\mathbb{R}$ & $f(x) = |x|$\\
+	$\R$ & $f(x) = c, c \in \R$\\
+	$\R$ & $f(x) = |x|$\\
 	$[0, \infty)$& $f(x) = \sqrt{x}$\\
 	\hline
-	$D \subseteq \mathbb{R}^2$ &  $f(x, y) \in \mathbb{R}$ \\
+	$D \subseteq \R^2$ &  $f(x, y) \in \R$ \\
 	\hline
-	$\mathbb{R}^2$ & $f(x, y) = x+y$\\
-	$\mathbb{R}^2$ & $f(x, y) = x \cdot y$\\
-	$\mathbb{R} \times (\mathbb{R} \setminus \{0\}) $ & $f(x, y) = x \div y$\\
+	$\R^2$ & $f(x, y) = x+y$\\
+	$\R^2$ & $f(x, y) = x \cdot y$\\
+	$\R \times (\R \setminus \{0\}) $ & $f(x, y) = x \div y$\\
 	\hline
 	\end{tabular}
 	\end{center}
@@ -155,46 +158,69 @@ andere Normen
 	divergente/uneigentlich konvergente Folgen gilt das nicht.\\
 	\\
 	\begin{itemize}
-	\item Polynome (in $\mathbb{C}$ und $\mathbb{R}$) sind stetig auf ganz $\mathbb{C}$ 
-	bzw. $\mathbb{R}$.
+	\item Polynome (in $\mathbb{C}$ und $\R$) sind stetig auf ganz $\mathbb{C}$ 
+	bzw. $\R$.
 	\item $\max(a,b) = \frac{a + b + |a-b|}{2}$ und $\min(a,b) = \frac{a+b - |a-b|}{2}$ 
-	sind stetig auf $\mathbb{R}^2$, bzw. die entsprechenden Funktionen auch in 
+	sind stetig auf $\R^2$, bzw. die entsprechenden Funktionen auch in 
 	höherdimensionalen Räumen.
 	\item Als Konsequenz sind auch Normen stetig.
 	\end{itemize}
 	
 	
 	\subsubsection{Stetigkeit der Verknüpfung von Funktionen}
-		Sei $f : D \subseteq \mathbb{R}^d \to \mathbb{R}^q$, 
-		$g : E \subseteq \mathbb{R}^q \to \mathbb{R}^p$ mit 
+		Sei $f : D \subseteq \R^d \to \R^q$, 
+		$g : E \subseteq \R^q \to \R^p$ mit 
 		$f(D) \subseteq E$ und \\
-		$g \circ f : D \subseteq \mathbb{R}^d \to \mathbb{R}^p, 
+		$g \circ f : D \subseteq \R^d \to \R^p, 
 		(g \circ f)(x) := g(f(x))$ die Verkfüpfung von $f$ mit $g$. 
 		Dann gilt: Wenn $f$ stetig in $x \in D$ und $g$ stetig $f(x) \in E$\\
 		$\Rightarrow g \circ f$ stetig in $x \in D$
 \subsection{Monotone Folgen}
-	$(a_n)_{n \in \mathbb{N}}$ monoton wachsend $\Leftrightarrow a_n \leq a_{n+1} 
-	\, \forall n \in \mathbb{N}$\\
-	$(a_n)_{n \in \mathbb{N}}$ monoton fallend $\Leftrightarrow a_n \geq a_{n+1} 
-	\, \forall n \in \mathbb{N}$\\
+	$(a_n)_{n \in \N}$ monoton wachsend $\Leftrightarrow a_n \leq a_{n+1} 
+	\, \forall n \in \N$\\
+	$(a_n)_{n \in \N}$ monoton fallend $\Leftrightarrow a_n \geq a_{n+1} 
+	\, \forall n \in \N$\\
 	Strenge Monotonie gilt, falls statt $\leq, \geq$ echte Ungleichheit gilt.\\
 	\subsubsection{Satz}
-		Jede beschränkte, monotone Folge $(a_n)_{n \in \mathbb{N}} \subset \mathbb{R}$
+		Jede beschränkte, monotone Folge $(a_n)_{n \in \N} \subset \R$
 		ist konvergent.
-		Jede unbeschränkte, monotone Folge $(a_n)  \subset \mathbb{R}$ konvergiert 
+		Jede unbeschränkte, monotone Folge $(a_n)  \subset \R$ konvergiert 
 		uneigentlich.
 \subsection{Beschränkte Folgen}
 	\subsubsection{Teilfolgen und Häufungswerte}
-		Ist $(a_n) \subset \mathbb{R}^d$ eine beliebige Folge und 
-		$(n_k)_{k \in \mathbb{N}} \subset \mathbb{N} $ 
-		streng monoton wachsend, dann heißt $ (a_{n_k})_{k \in \mathbb{N}}$
+		Ist $(a_n) \subset \R^d$ eine beliebige Folge und 
+		$(n_k)_{k \in \N} \subset \N $ 
+		streng monoton wachsend, dann heißt $ (a_{n_k})_{k \in \N}$
 		\textbf{Teilfolge} von $(a_n)$.\\
-		Grenzwerte konvergenter Teilfolgen heißen \textbf{Häufungswerte}.
+		Grenzwerte konvergenter Teilfolgen heißen \textbf{Häufungswerte}. Der maximale
+		bzw. minimale Häufungswert werden als $\limsup$ bzw. $\liminf$ 
+		bezeichnet und wie folgt definiert:
+		$$ 
+		\limsup_{n \to \infty} a_n := 
+		\lim_{n \to \infty} \left( \sup_{k \geq n} a_k \right) ,
+		\qquad \quad
+		\liminf_{n \to \infty} a_n := 
+		\lim_{n \to \infty} \left( \inf_{k \geq n} a_k \right)
+		$$
 	\subsubsection{Satz von Bolzano-Weierstrass}
+		Jede beschränkte Folge $(a_n)_{n \in \N} \subset \R$ besitzt
+		mindestens eine konvergente Teilfolge $(a_{n_k})_{k \in \N}$ (also min.
+		einen Häufungswert).
 	\subsubsection{Lemma Seite 6/14, VL 6}
+		Sei $(a_n)$ beschränkt. Dann gilt: \\
+		$$ \limsup_{n \to \infty} a_n = \liminf_{n \to \infty} a_n = a
+		\qquad \Leftrightarrow \qquad
+		\lim_{n \to \infty} a_n = a$$
 	\subsubsection{Korollar Seite 7/14, VL 6}
+		Jede beschränkte Folge $(a_n)_{n \in \N} \subset \R^d$ besitzt
+		mindestens eine konvergente Teilfolge.\\
+		$(a_n)$ ist genau dann konvergent, wenn sie genau einen Häufungswert besitzt.	
 	\subsection{Exponentialfunktion}
+		$e^x = \lim_{n \to \infty} \left(1 + \frac{x}{n} \right)^n, x \in \R$
 	\subsubsection{Abschätzungen der Exponentialfunktion}
+		$e^x \geq 1 + x \forall x \in \R$
+		$e^{-x} \geq 1 - x \Rightarrow e^x \leq \frac{1}{1-x}$ für $x < 1$ 
+		
 
 \section{Reihen}
 \subsection{Konvergenz von Reihen}
