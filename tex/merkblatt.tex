@@ -248,7 +248,7 @@ andere Normen
 				\qquad z \in \C, |z| < 1 $
 				\item Harmonische Reihe: $\sum\limits_{k=1}^{\infty} \frac{1}{k} = \infty $
 			\end{itemize}
-	\subsection{Vergleichskriterien}
+	\subsection{Konvergenzkriterien}
 		\subsubsection{Majorantenkriterium}
 			Seien $\left( \sum\limits_{k=1}^{n} a_k \right) \subset \C$ 
 			und $\left( \sum\limits_{k=1}^{n} b_k \right) \subset \R$ Reihen mit 
@@ -275,7 +275,26 @@ andere Normen
 			$\rho := \limsup\limits_{k \to \infty} \sqrt[k]{|a_k|} $. Die Reihe konvergiert
 			falls $\rho < 1$ und sie divergiert, falls $\rho > 1$. Für $\rho = 1$ lässt sich 
 			nichts sagen.
-
+		\subsubsection{Leibnizsches Konvergenzkriterium}
+			Sei $(a_n) \subset \R$ eine \textit{monoton fallende Nullfolge}. Dann konvergiert
+			die zugehörige alternierende Reihe
+			$ \sum\limits_{k=0}^{\infty} (-1)^k a_k = s $ und die Partialsumme $s_n$
+			approximiert den Reihenwert $s$ bis auf einen Fehler, der höchstens so groß ist,
+			wie der Betrag des ersten, weggelassenen Summanden.
+			$ \left| \sum\limits_{k=n+1}^{\infty} (-1)^k a_k  \right| \leq a_{n+1} $
+		\subsubsection{Praktische Tipps zur Untersuchung der Konvergenz}
+			\begin{enumerate}
+			\item Bekannte Beispiele kennen
+			\item Untersuche, ob es sich bei $a_n$ um eine Nullfolge handelt.
+			\item Betrachte $\sum |a_k|$ und vergleiche mit bekannten Reihen. 
+				Findet Majorantenkriterium Anwendung?
+			\item Wende Quotientenkriterium an
+			\item Wende Wurzelkriterium an
+			\item Alternierende Reihe? 
+			\end{enumerate}
+	\subsection{Reihenumordnung}
+		\subsubsection{Absolute Konvergenz}
+		
 \section{Konsequenzen der Stetigkeit}
 	\subsection{Zwischenwertsatz} 
 	\subsection{Existenz von Maximum und Minimum}
