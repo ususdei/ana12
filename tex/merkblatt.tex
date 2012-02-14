@@ -576,7 +576,35 @@ Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
 % TODO: erklärungen von dem spaß, und noch mehr. momentan zu müde
 % Blatt 10
 \section{Nützliches}
-\subsection{Beispiel Folgen}
+	\subsection{Rekursiv definierte Folgen und ihre Grenzwerte}
+	Gegeben sei eine rekursiv definierte Folge $(a_n)_{n \in \N}$. 
+	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
+	\begin{enumerate}
+		\item Monotonie zeigen 
+		\item Beschränktheit zeigen (die ersten beiden Schritte häufig mit Induktion)
+		\item Konvergenz folgern (mehr oder weniger instant aus den beiden vorherigen Punkten)
+		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation. Konkret heißt
+		das: Auf beiden Seiten der Rekursionsrelation den $\lim\limits_{n \to \infty}$ bilden.\\
+		Bsp.: $a_{n+1}^2 = 1 + a_n \quad \Rightarrow \lim\limits_{n \to \infty} a_n^2 =
+		\lim\limits_{n \to \infty} (1 + a_n)
+		\Rightarrow \dots $\\
+		$\Rightarrow a^2 = 1 + a_n$.
+	\end{enumerate}
+	\subsection{Häufungswerte}
+	Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
+	kein Häufungswert: $a_n:= n$\\
+	genau einen Häufungswert:
+	$$a_n := \begin{cases} 1 & n \equiv 0 \pmod{2} \\ n & \text{sonst} \end{cases} $$
+	genau zwei Häufungswerte: $a_n := (-1)^n$\\
+	unendlich viele Häufungswerte: $a_n := n \cdot 10^{\lfloor- \log_{10}(n+1) \rfloor}$
+
+\subsection{Reihen}
+Reihe $\sum \limits_{n=0}^\infty a_n$ mit $\limsup \limits_{n \to \infty} \sqrt[n]{|a_n|} = 1$ \\
+divergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n}$ \\
+absolut konvergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n^2}$ \\
+konvergiert, nicht absolut: $\sum \limits_{n=1}^\infty \frac{(-1)^n}{n} $ oder $\sum \limits_{n=0}^\infty \frac{(-1)^n}{2n+1}$\\
+
+\subsection{Folgen und Differenzierbarkeit}
 Folge von Funktionen $f_n: [a,b] \rightarrow \R, b > a$, die punktweise gegen $f$ konvergiert:
 $f_n$ stetig, aber $f$ nicht\\
 $f_n(x) := x^n$ \\\\
@@ -594,34 +622,9 @@ $f$ als auch jede Funktion $f_n$ integrierbar, aber $\lim \limits_{n \to \infty}
 $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac{1}{n} \\
 2n-n^2 x & x \in [\frac{1}{n},\frac{2}{n}] \\
 0 & x > \frac{2}{n} \\ \end{cases}$$
-\subsection{Rekursiv definierte Folgen und ihre Grenzwerte}
-	Gegeben sei eine rekursiv definierte Folge $(a_n)_{n \in \N}$. 
-	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
-	\begin{enumerate}
-		\item Monotonie zeigen 
-		\item Beschränktheit zeigen (die ersten beiden Schritte häufig mit Induktion)
-		\item Konvergenz folgern (mehr oder weniger instant aus den beiden vorherigen Punkten)
-		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation. Konkret heißt
-		das: Auf beiden Seiten der Rekursionsrelation den $\lim\limits_{n \to \infty}$ bilden.\\
-		Bsp.: $a_{n+1}^2 = 1 + a_n \quad \Rightarrow \lim\limits_{n \to \infty} a_n^2 =
-		\lim\limits_{n \to \infty} (1 + a_n)
-		\Rightarrow \dots $\\
-		$\Rightarrow a^2 = 1 + a_n$.
-	\end{enumerate}
-\subsection{Häufungswerte}
 
-Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
-kein Häufungswert: $a_n:= n$\\
-genau einen Häufungswert:
-$$a_n := \begin{cases} 1 & n \equiv 0 \pmod{2} \\ n & \text{sonst} \end{cases} $$
-genau zwei Häufungswerte: $a_n := (-1)^n$\\
-unendlich viele Häufungswerte: $a_n := n \cdot 10^{\lfloor- \log_{10}(n+1) \rfloor}$
-
-\subsection{Reihen}
-Reihe $\sum \limits_{n=0}^\infty a_n$ mit $\limsup \limits_{n \to \infty} \sqrt[n]{|a_n|} = 1$ \\
-divergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n}$ \\
-absolut konvergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n^2}$ \\
-konvergiert, nicht absolut: $\sum \limits_{n=1}^\infty \frac{(-1)^n}{n} $ oder $\sum \limits_{n=0}^\infty \frac{(-1)^n}{2n+1}$\\
+%
+%
 %
 %
 %
