@@ -595,16 +595,21 @@ $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac
 2n-n^2 x & x \in [\frac{1}{n},\frac{2}{n}] \\
 0 & x > \frac{2}{n} \\ \end{cases}$$
 \subsection{Rekursiv definierte Folgen und ihre Grenzwerte}
-	Gegeben sei eine rektursiv definierte Folge $(a_n)_{n \in \N}$. 
+	Gegeben sei eine rekursiv definierte Folge $(a_n)_{n \in \N}$. 
 	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
 	\begin{enumerate}
-		\item Monotonie zeigen
-		\item Beschränktheit zeigen
-		\item Konvergenz folgern (mehr oder weniger instant aus den beiden Punkten)
-		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation
+		\item Monotonie zeigen 
+		\item Beschränktheit zeigen (die ersten beiden Schritte häufig mit Induktion)
+		\item Konvergenz folgern (mehr oder weniger instant aus den beiden vorherigen Punkten)
+		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation. Konkret heißt
+		das: Auf beiden Seiten der Rekursionsrelation den $\lim\limits_{n \to \infty}$ bilden.\\
+		Bsp.: $a_{n+1}^2 = 1 + a_n \quad \Rightarrow \lim\limits_{n \to \infty} a_n^2 =
+		\lim\limits_{n \to \infty} (1 + a_n)
+		\Rightarrow \dots $\\
+		$\Rightarrow a^2 = 1 + a_n$.
 	\end{enumerate}
 
-\section{Beispiel Häufungswerte}
+\subsection{Beispiel Häufungswerte}
 
 Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
 kein Häufungswert: $a_n:= n$\\
