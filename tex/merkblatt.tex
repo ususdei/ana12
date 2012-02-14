@@ -574,7 +574,8 @@ Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
 % @raphi: Hier Beispiele von den zu findenden Folgen
 % TODO: erklärungen von dem spaß, und noch mehr. momentan zu müde
 % Blatt 10
-\section{Beispiel Folgen}
+\section{Nützliches}
+\subsection{Beispiel Folgen}
 Folge von Funktionen $f_n: [a,b] \rightarrow \R, b > a$, die punktweise gegen $f$ konvergiert:
 $f_n$ stetig, aber $f$ nicht\\
 $f_n(x) := x^n$ \\\\
@@ -592,6 +593,15 @@ $f$ als auch jede Funktion $f_n$ integrierbar, aber $\lim \limits_{n \to \infty}
 $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac{1}{n} \\
 2n-n^2 x & x \in [\frac{1}{n},\frac{2}{n}] \\
 0 & x > \frac{2}{n} \\ \end{cases}$$
+\subsection{Rekursiv definierte Folgen und ihre Grenzwerte}
+	Gegeben sei eine rektursiv definierte Folge $(a_n)_{n \in \N}$. 
+	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
+	\begin{enumerate}
+		\item Monotonie zeigen
+		\item Beschränktheit zeigen
+		\item Konvergenz folgern (mehr oder weniger instant aus den beiden Punkten)
+		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation
+	\end{enumerate}
 
 
 
