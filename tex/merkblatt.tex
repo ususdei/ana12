@@ -650,7 +650,35 @@ $$
 	\lim_{x \to \infty} \frac{\sin{x} -x}{\sin{x}+x} = -1, 
 	\qquad \lim_{x \to 0} \frac{\sin{x}}{x} = 1
 $$
+\subsection{Folgen als Gegenbeispiele für falsche Aussagen}
+Für jede der nachfolgenden Aussagen (a)-(d) (welche allesamt falsch sind) wird eine Funktion $f:(-1,1) \to \mathbb{R}$ gesucht, die ein Gegenbeispiel darstellt. \\\\
+a)\\
+Wenn $f'(x)$ für jedes $x \neq 0$ existiert und der Grenzwert $\lim_{x \to 0} f'(x)$ existiert, dann ist $f$ auch in $0$ differenzierbar. \\
 
+Ein Gegenbeispiel ist die Signums-Funktion, welche definiert ist als:
+
+$$ \text{signum(}x) = \begin{cases} \; 1 & ,x > 0 \\ \; 0 & ,x = 0 \\ -1 & ,x < 0 \end{cases} $$Sie lässt sich zwar an allen Stellen $ \neq 0$ ableiten und der Grenzwert gegen 0 existiert (man nähert sich von beiden Seiten auf $f'(x) = 0$, jedoch ist die erste Ableitung bei $x=0$ nicht definiert.
+\\
+
+
+b)\\
+Wenn $f$ in $0$ nicht differenzierbar ist und deshalb \emph{nicht} $f'(0) = 0$ gilt, dann hat $f$ in $0$ kein lokales Extremum. \\
+
+Ein Gegenbeispiel wäre die Betragsfunktion $f(x) = |x|$. $f'(0)$ ist hier nicht definiert, aber bei $x=0$ hat die Funktion dennoch ein Minimum.\\
+
+% check
+
+c)\\
+Wenn $f$ stetig differenzierbar auf $(-1,1)$ ist und $f'(0) = 0$, dann ist $0$ ein lokales Extremum von $f$. \\
+
+Ein Gegenbeispiel ist $f(x) = x^3$. $f'(x) = 3x^2$, was also für $x=0$ wohldefiniert ist. Dennoch ist $x=0$ kein lokales Extremum, sondern ein Wendepunkt.\\
+
+% check
+
+d)\\
+Wenn $f$ stetig differenzierbar auf $(-1,1)$ ist und in $0$ ein lokales Maximum hat, dann existiert auch $f''(0)$ und es ist $f''(0) < 0$.\\
+
+Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant (Definition in der Vorlesung war mittels "$\leq$"). Dann gilt $f'(x) = 0$ und $f''(x) = 0$ und somit $f''(x) \not< 0$.\\
 %
 %
 %
