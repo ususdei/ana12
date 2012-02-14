@@ -218,7 +218,7 @@ andere Normen
 		$(a_n)$ ist genau dann konvergent, wenn sie genau einen Häufungswert besitzt.	
 	\subsection{Exponentialfunktion}
 		$e^x = \lim_{n \to \infty} \left(1 + \frac{x}{n} \right)^n, x \in \R$\\
-		$e^{\frac{x+y}{2}} = e^{\frac{x}{2}} \cdot e^{\frac{y}{2}} = \sqrt(e^xe^y)$
+		$e^{\frac{x+y}{2}} = e^{\frac{x}{2}} \cdot e^{\frac{y}{2}} = \sqrt{e^xe^y}$
 	\subsubsection{Abschätzungen der Exponentialfunktion}
 		$e^x \geq 1 + x \forall x \in \R$\\
 		$e^{-x} \geq 1 - x \qquad \Rightarrow \qquad e^x \leq \frac{1}{1-x}$ für $x < 1$ 
@@ -609,7 +609,11 @@ $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac
 		$\Rightarrow a^2 = 1 + a_n$.
 	\end{enumerate}
 
+<<<<<<< HEAD
 \subsection{Beispiel Häufungswerte}
+=======
+\subsection{Häufungswerte}
+>>>>>>> 1ce19bfe5adf9c9feeb7f059bbcf7898fd03acca
 
 Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
 kein Häufungswert: $a_n:= n$\\
@@ -618,7 +622,11 @@ $$a_n := \begin{cases} 1 & n \equiv 0 \pmod{2} \\ n & \text{sonst} \end{cases} $
 genau zwei Häufungswerte: $a_n := (-1)^n$\\
 unendlich viele Häufungswerte: $a_n := n \cdot 10^{\lfloor- \log_{10}(n+1) \rfloor}$
 
-
+\subsection{Reihen}
+Reihe $\sum \limits_{n=0}^\infty a_n$ mit $\limsup \limits_{n \to \infty} \sqrt[n]{|a_n|} = 1$ \\
+divergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n}$ \\
+absolut konvergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n^2}$ \\
+konvergiert, nicht absolut: $\sum \limits_{n=1}^\infty \frac{(-1)^n}{n} $ oder $\sum \limits_{n=0}^\infty \frac{(-1)^n}{2n+1}$\\
 %
 %
 %
