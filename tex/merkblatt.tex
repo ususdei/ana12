@@ -604,7 +604,7 @@ $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac
 		\item Grenzwert bestimmen durch Grenzübergang in der Rekursionsrelation
 	\end{enumerate}
 
-\section{Beispiel Häufungswerte}
+\subsection{Häufungswerte}
 
 Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
 kein Häufungswert: $a_n:= n$\\
@@ -613,7 +613,11 @@ $$a_n := \begin{cases} 1 & n \equiv 0 \pmod{2} \\ n & \text{sonst} \end{cases} $
 genau zwei Häufungswerte: $a_n := (-1)^n$\\
 unendlich viele Häufungswerte: $a_n := n \cdot 10^{\lfloor- \log_{10}(n+1) \rfloor}$
 
-
+\subsection{Reihen}
+Reihe $\sum \limits_{n=0}^\infty a_n$ mit $\limsup_{n \to \infty} \sqrt[n]{|a_n|} = 1$ \\
+divergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n}$ \\
+absolut konvergiert: $ \sum \limits_{n=1}^\infty \frac{1}{n^2}$ \\
+konvergiert, nicht absolut: $\sum \limits_{n=1}^\infty \frac{(-1)^n}{n} $ oder $\sum \limits_{n=0}^\infty \frac{(-1)^n}{2n+1}$\\
 %
 %
 %
