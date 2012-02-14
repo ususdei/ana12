@@ -593,7 +593,14 @@ $$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac
 2n-n^2 x & x \in [\frac{1}{n},\frac{2}{n}] \\
 0 & x > \frac{2}{n} \\ \end{cases}$$
 
+\section{Beispiel Häufungswerte}
 
+Beispiele für \emph{divergierende} Folgen $(a_n)_{n \in \N} \in \R$:\\
+kein Häufungswert: $a_n:= n$\\
+genau einen Häufungswert:
+$$a_n := \begin{cases} 1 & n \equiv 0 \pmod{2} \\ n & \text{sonst} \end{cases} $$
+genau zwei Häufungswerte: $a_n := (-1)^n$\\
+unendlich viele Häufungswerte: $a_n := n \cdot 10^{\lfloor- \log_{10}(n+1) \rfloor}$
 
 
 %
