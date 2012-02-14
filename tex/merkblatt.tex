@@ -576,6 +576,22 @@ Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
 % TODO: erklärungen von dem spaß, und noch mehr. momentan zu müde
 % Blatt 10
 \section{Nützliches}
+	\subsection{Beispiele für Folgen}
+		$(a_n)_{n \in \N} \to 0, \, (b_n)_{n \in \N} \to +\infty$\\
+		\begin{itemize}
+			\item $(a_n b_n) \to 0$: 
+				$ \qquad \qquad \qquad a_n := 0, \, b_n := n$
+			\item $(a_n b_n) \to a \in \R \setminus \{0\}$: 
+				$ \qquad a_n := \frac{a}{n}, \, b_n := n$
+			\item $(a_n b_n) \to + \infty$: 
+				$ \qquad \qquad a_n := \frac{1}{n}, \, b_n := n^2$
+			\item $(a_n b_n) \to - \infty$: 
+				$ \qquad  \qquad a_n := -\frac{1}{n}, \, b_n := n^2$
+			\item $(a_n b_n)$ unbeschränkt und konvergiert nicht uneigentlich:\\
+				$a_n := (-1)^n\frac{1}{n}, \, b_n := n^2$
+			\item $(a_n b_n)$ beschränkt und divergiert:\\ 
+				$a_n := -\frac{1}{n}, \, b_n := n$
+		\end{itemize}
 	\subsection{Rekursiv definierte Folgen und ihre Grenzwerte}
 	Gegeben sei eine rekursiv definierte Folge $(a_n)_{n \in \N}$. 
 	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
