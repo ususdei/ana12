@@ -571,6 +571,27 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 \\\\\\
 Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
 
+% @raphi: Hier Beispiele von den zu findenden Folgen
+% TODO: erklärungen von dem spaß, und noch mehr. momentan zu müde
+% Blatt 10
+\section{Beispiel Folgen}
+Folge von Funktionen $f_n: [a,b] \rightarrow \R, b > a$, die punktweise gegen $f$ konvergiert:
+$f_n$ stetig, aber $f$ nicht\\
+$f_n(x) := x^n$ \\\\
+$f_n$ stetig differenzierbar, aber $f$ nicht\\
+$f_n(x) := \sqrt{x^n + \frac{1}{n}}$ konvergiert punktweise gegen $f(x) = |x|$. Diese ist aber an der Stelle $0$ nicht differenzierbar. \\\\
+$f_n$ integrierbar ist, aber $f$ nicht\\
+$$ f_n(x) := \begin{cases} \frac{1}{x} & x \in [\frac{1}{n},1] \\
+n & x \in (0, \frac{1}{n}] \\
+0 & x = 0 \end{cases}
+\, \text{ und } \, f(x) := \begin{cases} \frac{1}{x} & x \in (0,1] \\
+0 & x = 0 \\ \end{cases}$$
+$f$ und jede Funktion $f_n$ auf $(a,b)$ stetig differenzierbar ist, aber $\lim \limits_{n \to \infty} f_n'(x)$ für mindestens ein $x \in (a,b)$ nicht existiert\\
+$f_n(x) := \frac{1}{n} \sin(n^2 x)$ konvergiert auf $[-1,1]$ punktweise gegen die Nullfunktion, aber $f_n'(x) = n \cos(n^2 x)$ konvergiert jedenfalls nicht für $x = 0$, da dort $f_n'(0) = n$.\\\\
+$f$ als auch jede Funktion $f_n$ integrierbar, aber $\lim \limits_{n \to \infty} \int \limits_a^b f_n(x) \d x \neq \int \limits_a^b f(x) \d x$
+$$ f_n : [0,1] \rightarrow \R, \, f_n(x) := \begin{cases} n^2 x & x \in [0,\frac{1}{n} \\
+2n-n^2 x & x \in [\frac{1}{n},\frac{2}{n}] \\
+0 & x > \frac{2}{n} \\ \end{cases}$$
 
 
 
