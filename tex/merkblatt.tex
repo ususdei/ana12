@@ -423,7 +423,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
 	\end{enumerate}
 \subsection{partielle Integration}
-	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$
+	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$ oder $ \int u \d v = uv - \int v \d u$
 \subsection{Substitution}
 	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
 	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
@@ -683,7 +683,17 @@ Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant (Defi
 \subsection{Integrale}
 
 $$ \int \frac{1}{x} \d x = \ln |x| + C, \, \int \sin{x} \d x = - \cos{x} + C, \, \int a^x \d x = \frac{1}{\ln{a}} a^x + C$$
-$$ \int \frac{1}{a^2 + x^2} \d x = \frac{1}{a} \arctan{\frac{x}{a}} + C , \, \int \frac{1}{\sqrt{a^2-x^2}} \d x = \arcsin{\frac{x}{a}} + C, |x| < a $$
+$$ \int \frac{1}{a^2 + x^2} \d x = \frac{1}{a} \arctan{\left(\frac{x}{a}\right)} + C , \, \int \frac{1}{\sqrt{a^2-x^2}} \d x = \arcsin{\left(\frac{x}{a}\right)} + C, |x| < a $$
+
+\subsection{Ableitungen}
+
+$f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$ \\
+$f(x) = \sqrt{x} = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2}x^{-\frac{1}{2}}$\\
+$f(x) = \sin{x} \Rightarrow f'(x) = \cos{x}$ \\
+$f(x) = \cos{x} \Rightarrow f'(x) = - \sin{x}$ \\
+$f(x) = e^x \Rightarrow f'(x) = e^x $ \\
+$f(x) = \ln{x} \Rightarrow f'(x) = \frac{1}{x}$ \\
+$f(x) = a^x \Rightarrow f'(x) = a^x (\ln{a})$\\
 %
 %
 %
