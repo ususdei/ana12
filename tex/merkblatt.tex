@@ -336,7 +336,7 @@ andere Normen
 		\subsubsection{Umordnungssatz}
 			Nur absolut konvergente Reihen können beliebig umgeordnet werden, ohne dass
 			sich ihre Summe ändert.
-		\subsubsection{Multiplikation vn Reihen}
+%		\subsubsection{Multiplikation von Reihen}
 			
 		
 \section{Konsequenzen der Stetigkeit}
@@ -399,6 +399,16 @@ andere Normen
 	\item $f''(x_0) = 0 \Rightarrow$ keine Aussage direkt möglich.
 	\end{itemize}
 
+\subsection{Mittelwertsatz der Differentialrechnung}
+	Sei $f : [a, b] \to \R$ stetig und diffbar. Dann:
+	$$
+		\exists \xi \in (a, b) : \frac{f(b)-f(a)}{b-a} = f'(\xi)
+	$$
+	Allgemeiner mit $g:[a,b] \to \R, \quad g'(x) \neq 0 \, \forall \, x \in [a,b]$:
+	$$
+		\exists \xi \in (a, b) : \frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(\xi)}{g'(\xi)}
+	$$
+
 \subsection{Regel von L'Hospital}
 	$f,g: (a,b) \to \R$ diffbar, $a,b \in \R \cup \{\pm \infty\}$ \\
 	Sei $x_0 \in (a,b)$ und gilt \\
@@ -452,20 +462,20 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
 	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
 	\end{enumerate}
-\subsection{partielle Integration}
+\subsection{Partielle Integration}
 	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$ oder $ \int u \d v = uv - \int v \d u$
 \subsection{Substitution}
 	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
 	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
 	$x = g^{-1}(y) \Leftrightarrow y=g(x) \quad \frac{\d y}{\d x} = g'(x)$
-\subsection{uneigentliche Integrale}
+\subsection{Uneigentliche Integrale}
 	Sei $f:[a,b] \rightarrow \menge{R}$ integrierbar $\forall [\alpha, \beta], a \leq \alpha < \beta < b$ \\
 	$ \Rightarrow \int\limits_a^b f(x) \d x = \lim\limits_{\beta \to b} \int\limits_a^\beta f(x) \d x$
 \subsection{Integralkriterium}
 	F"ur $f: [1,\infty) \to [0, \infty )$ monoton fallend gilt: \\
 	$0 \leq \lim\limits_{n \to \infty} ( \underbrace{\sum\limits_{k=1}^n f(k)}_{b_n} - \underbrace{\int\limits_1^{n+1} f(x) \d x}_{c_n} ) \leq f(1)$ \\
 	$\Rightarrow \sum\limits_{n=1}^\infty f(n) < \infty \Leftrightarrow \int\limits_1^\infty f(x) \d x < \infty$
-\subsection{mehrdimensionale Integrale}
+\subsection{Mehrdimensionale Integrale}
 \subsubsection{"uber Quader $Q \in \R^n$}
 	$\int\limits_Q f(x_1,\dots,x_n) \d x_1 \dots \d x_n = 
 	\int\limits_{a_n}^{b_n} \dots \int\limits_{a_2}^{b_1} ( \int\limits_{a_1}^{b_1} f(x_1,\dots,x_n) \d x_1 ) \d x_2) \dots \d x_n$ \\
@@ -600,7 +610,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	Sei $\phi$ stetig und $\frac{\partial f}{\partial y'_j} \quad \forall j.1 \leq j \leq n$ stetig,
 	dann hat AWP eine eindeutige L"osung in der lokalen Umgebung von $t_0$
 \\\\\\
-Plot von $\sin x \cos x$: http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
+
 
 % @raphi: Hier Beispiele von den zu findenden Folgen
 % TODO: erklärungen von dem spaß, und noch mehr. momentan zu müde
@@ -782,6 +792,17 @@ $$
 	\sinh 2x = 2 \sinh x \cosh x, \qquad
 	\cosh 2x = \cosh^2 x + \sinh^2 x
 $$
+\subsection{Plots}
+\includegraphics[scale=0.5]{trig1}
+\includegraphics[scale=0.5]{trig2}
+
+\subsection{Sonstiges}
+	$$
+		\lim_{n \to \infty} \frac{e^{h_n} - 1}{h_n} = 1
+	$$
+	Plot von $\sin x \cos x$:\\
+	http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
+
 %
 %
 %
