@@ -442,7 +442,8 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 \subsection{Substitution}
 	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
 	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
-	$x = g^{-1}(y) \Leftrightarrow y=g(x) \quad \frac{\d y}{\d x} = g'(x)$
+	$x = g^{-1}(y) \Leftrightarrow y=g(x) \quad \frac{\d y}{\d x} = g'(x)$ \\
+	Vorgehen: Wir setzen $u$ gleich einem Wert, sodass die ableitung $\d u$ einen Teil unserer Ableitung ersetzen kann. Wir ersetzen sowohl $\d x$ als auch (sofern vorhanden) die Grenzen. Nun fahren wir normal mit der Auswertung fort.
 \subsection{uneigentliche Integrale}
 	Sei $f:[a,b] \rightarrow \menge{R}$ integrierbar $\forall [\alpha, \beta], a \leq \alpha < \beta < b$ \\
 	$ \Rightarrow \int\limits_a^b f(x) \d x = \lim\limits_{\beta \to b} \int\limits_a^\beta f(x) \d x$
