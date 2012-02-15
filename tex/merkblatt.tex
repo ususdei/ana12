@@ -430,7 +430,7 @@ andere Normen
 		\end{pmatrix}$
 	\item $m = 1, n \in \menge{N}$ \\
 		$A(x) = (\nabla f(x))^T = \left ( \frac{\partial f}{\partial_1}, \cdots, \frac{\partial f}{\partial_n} \right )$ \\
-		Falls $f$ stetig partiall diffbar ist $\Rightarrow f$ ist diffbar. \\
+		Falls $f$ stetig partiell diffbar ist $\Rightarrow f$ ist diffbar. \\
 		$D^2 f(x) = \begin{pmatrix}
 			\frac{\partial^2 f}{\partial x_1 \partial x_1} 	& \cdots	& \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
 			\vdots						& \ddots	& \vdots	\\
@@ -446,7 +446,7 @@ andere Normen
 Defs.:  \dots \\
 Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckweise stetig, dann ist $f$ Riemann integrierbar.
 \underline{Hauptsatz der Differential und Integralrechnung} \\
-	Sei $f:[a,b] \rightarrow \menge{R} stetig, c \in [a,b]$ fest, dann $\quad F(x) := \int\limits_c^x f(y) \d y$
+	Sei $f:[a,b] \rightarrow \menge{R} \textit{ stetig }, c \in [a,b]$ fest, dann $\quad F(x) := \int\limits_c^x f(y) \d y$
 	\begin{enumerate}
 	\item stetig diffbar
 	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
@@ -708,7 +708,7 @@ Ein Gegenbeispiel ist $f(x) = x^3$. $f'(x) = 3x^2$, was also für $x=0$ wohldefi
 d)\\
 Wenn $f$ stetig differenzierbar auf $(-1,1)$ ist und in $0$ ein lokales Maximum hat, dann existiert auch $f''(0)$ und es ist $f''(0) < 0$.\\
 
-Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant (Definition in der Vorlesung war mittels "$\leq$"). Dann gilt $f'(x) = 0$ und $f''(x) = 0$ und somit $f''(x) \not< 0$.\\
+Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant. Dann gilt $f'(x) = 0$ und $f''(x) = 0$ und somit $f''(x) \not< 0$.\\
 
 \subsection{Integrale}
 
@@ -720,10 +720,13 @@ $$ \int \frac{1}{a^2 + x^2} \, \d x = \frac{1}{a} \arctan{\frac{x}{a}} + C , \, 
 $$
 	\int \arcsin \frac{x}{a} \, \d x = x \arcsin \frac{x}{a} + \sqrt{a^2 - x^2}  + C
 $$
-
+$$
+	\int \arccos x \, \d x = x \arccos x - \sqrt{1-x^2} + C
+$$
 $$
 	\int \arctan x \, \d x = x \arctan x - \frac{1}{2} \ln (x^2+1) + C
 $$
+
 
 %$$ \int \frac{1}{a^2 + x^2} \d x = \frac{1}{a} \arctan{\left(\frac{x}{a}\right)} + C , \, \int \frac{1}{\sqrt{a^2-x^2}} \d x = \arcsin{\left(\frac{x}{a}\right)} + C, |x| < a $$
 
