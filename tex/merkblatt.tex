@@ -108,8 +108,8 @@ Ungleichung vom mittleren Verhältnis:\\
 	\min(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n}) 
 	\leq \frac{a_1+\dots+a_n}{b_1+\dots+b_n} 
 	\leq \max(\frac{a_1}{b_1}, \dots, \frac{a_n}{b_n})
-	\quad (b_1,\dots,b_n > 0)
-	$
+	$\\
+	$ (b_1,\dots,b_n > 0)$
 \subsection{Cauchy-Schwarz'sche Ungleichung}
 $\sum\limits_{k=1}^n x_ky_k \leq \sqrt{\sum\limits_{k=1}^n x_k^2} \cdot \sqrt{\sum\limits_{k=1}^n y_k^2} \quad (x_1,\dots,x_n,y_1,\dots,y_n \in \menge{R})$ \\
 oder auch: $\langle x,y \rangle \leq ||x|| \cdot ||y|| \quad (x,y \in \menge{R}^n)$
@@ -134,13 +134,16 @@ andere Normen
 	\qquad \Rightarrow  \qquad \lim_{n \to \infty} a_n' = a$$
 \subsubsection{Konvergenz in $\R^d$ und $\mathbb{C}$}
 	Die vektorwertige Folge\\
-	$\N \ni n \mapsto x_n = 
+	$\N \ni n \mapsto x_n$ mit \\
+	$x_n = 
 		\begin{pmatrix}
 			x_{n_1}\\
 			\vdots \\
 			x_{n_d}
-		\end{pmatrix}$
-	konvergiert gegen den Grenzwert $
+		\end{pmatrix}
+	$
+	konvergiert gegen den Grenzwert 
+	$
 		x = \begin{pmatrix}
 			x_{1}\\
 			\vdots \\
@@ -148,8 +151,9 @@ andere Normen
 		\end{pmatrix}$\\
 	$$\Leftrightarrow 
 		\lim_{n \to \infty} x_{n_k} = x_k 
-		\quad \forall k \in \{1, \dots, d \} 
-		\text{(komponentenweise Grenzwerte existieren)}$$
+		\quad \forall k \in \{1, \dots, d \}
+	$$
+	(komponentenweise Grenzwerte existieren).
 	Analog in $\mathbb{C}$ (isomorph zu $\R^2$).
 \subsection{Beschränktheit konvergenter Folgen}
 	Eine konvergente Folge $(a_n) \subset \R$ ist beschränkt.\\
@@ -185,7 +189,7 @@ andere Normen
 	\hline
 	\end{tabular}
 	\end{center}
-	Summe, Produkt, Quotient zweier konvergenter Folgen ist konvergent. Für
+	Summe, Differenz, Produkt und Quotient zweier konvergenter Folgen ist konvergent. Für
 	divergente/uneigentlich konvergente Folgen gilt das nicht.\\
 	\\
 	\begin{itemize}
@@ -268,12 +272,13 @@ andere Normen
 		\subsubsection{Notwendige Bedingung für Konvergenz}
 			$\sum\limits_{k=1}^{\infty} a_k = s 
 			\qquad \Rightarrow \qquad 
-			a_k \to 0 (n \to \infty)$
+			a_k \overset{n \to \infty}{\to} 0$
 		\subsubsection{Reihen mit nichtnegativen Gliedern}
 			$(s_n)$ mit $s_n = \sum\limits_{k=1}^{n} a_k$ mit $a_k \geq 0$ konvergiert 
 			($\sum\limits_{k=1}^{\infty} a_k < \infty$) $\Leftrightarrow (s_n) $ beschränkt.
 		\subsubsection{Beispiele}
 			\begin{itemize}
+				\itemsep-0.5em
 				\item Teleskopreihe: $ \sum\limits_{k=1}^{\infty} \frac{1}{k(k+1)}  = 1$
 				\item Geometrische Reihe: $ \sum\limits_{k=1}^{\infty} z^k = \frac{1}{1-z},
 				\qquad z \in \C, |z| < 1 $
@@ -289,6 +294,7 @@ andere Normen
 			$( \sum\limits_{k=1}^n b_k)$ heißt Majorante von 
 			$( \sum\limits_{k=1}^n a_k)$ und es gilt:
 			\begin{itemize}
+				\itemsep-0.5em
 				\item $( \sum\limits_{k=1}^n b_k)$ konvergiert 
 				$\Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
 				\item $( \sum\limits_{k=1}^n a_k)$ divergiert 
@@ -301,6 +307,7 @@ andere Normen
 			$( \sum\limits_{k=1}^n a_k) \in \C$ und $a_k \neq 0 \quad \forall k \leq k_0$
 			mit Grenzwert $ q:= \lim_{k \to \infty} |\frac{a_{k+1}}{a_k}|$
 			\begin{itemize}
+			\itemsep-0.5em
 			\item $q < 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
 			\item $q > 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
 			\item $q = 1 \Rightarrow $ keine Aussage möglich 
@@ -309,6 +316,7 @@ andere Normen
 			$(\sum\limits_{k=1}^n a_k)$ mit 
 			$\rho := \limsup_{k \to \infty} \sqrt[k]{|a_n|} $
 			\begin{itemize}
+				\itemsep-0.5em
 				\item $\rho < 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ konvergiert
 				\item $\rho > 1 \Rightarrow ( \sum\limits_{k=1}^n a_k)$ divergiert
 				\item $\rho = 1 \Rightarrow $ keine Aussage möglich 
@@ -318,6 +326,7 @@ andere Normen
 			$ \Rightarrow \sum\limits_{k=0}^ \infty (-1)^k a_k = s \quad$ konvergiert.
 		\subsubsection{Praktische Tipps zur Untersuchung der Konvergenz}
 			\begin{enumerate}
+			\itemsep-0.4em
 			\item Bekannte Beispiele kennen
 			\item Untersuche, ob es sich bei $a_n$ um eine Nullfolge handelt.
 			\item Betrachte $\sum |a_k|$ und vergleiche mit bekannten Reihen. 
@@ -363,7 +372,8 @@ andere Normen
 	Def.: $\I \in \R$ Intervall, $f: \I \to \R$ \\
 	$f$ heißt differenzierbar in $x_0 \in \I \\
 	\Leftrightarrow \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = c \in \R \\
-	\Leftrightarrow \forall (x_n)_{n \in \N} \subset \I$ mit $x_n \to x_0$ folgt, dass $\frac{f(x_n) - f(x_0)}{x_n-x_0} = c \in \R
+	\Leftrightarrow \forall (x_n)_{n \in \N} \subset \I$ mit $x_n \to x_0$ folgt, dass\\
+	$\frac{f(x_n) - f(x_0)}{x_n-x_0} = c \in \R
 	\Leftrightarrow \lim\limits_{n \to 0} \frac{f(x_0 + h)-f(x_0)}{h} = \in \R$ \\
 	Falls der Grenzwert 
 	$\Leftrightarrow \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ existiert,
@@ -417,19 +427,26 @@ andere Normen
 	$ \Rightarrow \lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)} \in \R$
 
 \subsection{Konvexit"at}
-	Mengen: $D \in \R^n$ ist konvex $\Leftrightarrow \forall x,y \in D \ [x,y] \in D$ \\ 
-	$[ x, y ] = \{\lambda x + (1- \lambda)y | \lambda \in [0,1] \}$ \\
+	Mengen: $D \in \R^n$ ist konvex $\Leftrightarrow \forall x,y \in D : [x,y] \in D$ \\ 
+	$[ x, y ] := \{\lambda x + (1- \lambda)y | \lambda \in [0,1] \}$ \\
+	Anschaulich: Für 2 Punkte $x,y$ aus $D$, liegen alle Punkte auf der Geraden zwischen $x$ und
+	$y$ wieder in $D$.\\
 	Funktionen: $D \subseteq \R^n$ konvex \\
 	$f: D \to \R$ konvex 	$\Leftrightarrow f(\lambda x + (1-\lambda)y) \leq \lambda f(x) + (1 - \lambda ) f(y)$\\
-	$f(a,b) \to \R \ 2 \times$ stetig diffbar.  $f$ konvex $\Leftrightarrow f''(x) \geq 0$
+	$f(a,b) \to \R $ ist 2 mal stetig diffbar.  $f$ konvex $\Leftrightarrow f''(x) \geq 0$
 
 \subsection{Mehrdimensionales Ableiten}
 	Def.: $U \in \menge{R}^n$ offen, \quad $f:U \to \menge{R}^m$ \\
-	$f$ heißt diffbar in $x \in U \Leftrightarrow \exists$ lin. Abb. $A: U \to \menge{R}^m \quad A \in \menge{R}^{m \times n}$ mit
+	$f$ heißt diffbar in $x \in U \Leftrightarrow \exists$ lin. Abb. 
+	$A: U \to \menge{R}^m $\\
+	$A \in \menge{R}^{m \times n}$ mit\\
 	$f(x+h) = f(x) + A(x)h + o(||h||) \rightarrow f(x+h) = f(x) + A(x)h$ \\
 	$A$ ist durch $f$ eindeutig bestimmt aber abh"angig von $x$.\\ $A$ heißt Jakobimatrix. $A(x) := J_f(x) =: Df(x)$
 	\begin{itemize}
-	\item $m,n$ beliebig: $A(x) = \begin{pmatrix}
+	\itemsep-0.5em
+	\item $m,n$ beliebig:\\
+		$
+		A(x) = \begin{pmatrix}
 			\frac{\partial f_1}{\partial x_1} 	& \cdots 	& \frac{\partial f_1}{\partial x_n} \\
 			\vdots					& \ddots	& \vdots	\\
 			\frac{\partial f_m}{\partial x_1}	& \cdots	& \frac{\partial f_m}{\partial x_n}
@@ -456,14 +473,16 @@ andere Normen
 Defs.:  \dots \\
 Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckweise stetig, dann ist $f$ Riemann integrierbar.
 \underline{Hauptsatz der Differential und Integralrechnung} \\
-	Sei $f:[a,b] \rightarrow \menge{R} \textit{ stetig }, c \in [a,b]$ fest, dann $\quad F(x) := \int\limits_c^x f(y) \d y$
+	Sei $f:[a,b] \rightarrow \menge{R} \textit{ stetig }, c \in [a,b]$ fest, dann \\
+	$\quad F(x) := \int\limits_c^x f(y) \d y$
 	\begin{enumerate}
+	\itemsep-0.5em
 	\item stetig diffbar
 	\item $F'(x) = f(x) \quad \forall x \in [a,b]$
 	\item $\int\limits_a^b f(x) \d x = F(b) - F(a)$
 	\end{enumerate}
 \subsection{Partielle Integration}
-	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$ oder $ \int u \d v = uv - \int v \d u$
+	$\int\limits_a^b f \cdot g' \d x = f \cdot g \big|_a^b - \int\limits_a^b f' \cdot g \ \d x$ oder $ \int u \, \d v = uv - \int v \, \d u$
 \subsection{Substitution}
 	$g:[a,b] \rightarrow \menge{R}, F: g([a,b]) \rightarrow \menge{R}$ stetig diffbar, $F' = f$ \\
 	$\int\limits_a^b f(y) \d y = \int\limits_{g^{-1}(a)}^{g^{-1}(b)} f(g(x)) g'(x) \d x$ \\
@@ -480,23 +499,35 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	$\int\limits_Q f(x_1,\dots,x_n) \d x_1 \dots \d x_n = 
 	\int\limits_{a_n}^{b_n} \dots \int\limits_{a_2}^{b_1} ( \int\limits_{a_1}^{b_1} f(x_1,\dots,x_n) \d x_1 ) \d x_2) \dots \d x_n$ \\
 	kurz: $\int\limits_Q f(x) \d^n x$ oder $\int\limits_Q f(x) \d x$ \\
-	Tr"ager von f: $Supp(f) = \overline{\{x \in \R^n : f(x) \neq 0\}}$ Im Folgende seien die Tr"ager aller Funktionen kompakt. \\
-	Charakteristische Funktion $\chi_K$ einer kompakten Menge $K \subset \R^n:
-	X_K(x) = \begin{cases}1, \text{  falls } x \in K \\ 0,  \text{   falls } x \in \R^n \setminus K.\end{cases}$ \\
-	Volumen von $K$:  $Vol(K) := \int\limits_{\R^n} \chi_K(x) \d^n x \quad \in \R_+  \entspr \quad \int\limits_K 1 \ \d^n x$
+	Tr"ager von f: $Supp(f) = \overline{\{x \in \R^n : f(x) \neq 0\}}$ 
+	Im Folgenden seien die Tr"ager aller Funktionen kompakt. \\
+	Charakteristische Funktion $\chi_K$ einer kompakten Menge 
+	$K \subset \R^n:
+	\chi_K(x) = 
+		\begin{cases}
+			1, \text{ falls } x \in K \\ 
+			0, \text{ falls } x \in \R^n \setminus K.\end{cases}$ \\
+	Volumen von $K$:  \\
+	$Vol(K) := \int\limits_{\R^n} \chi_K(x) \d^n x 
+	\quad \in \R_+  \entspr \quad \int\limits_K 1 \ \d^n x$
 \subsubsection{"uber beliebige stetige Funktionen mit kompakten Tr"ager}
-	Sei $ \in \R^{n \times n}$ invertierbar: $A\int\limits_{\R^n} f(Ax) |det A| d^n x = \int\limits_{\R^n} f(y) d^n y$ \\
-	Transformationssatz: Seien $U,V \subset \R^n$ offene Mengen und $\phi: U \to V$ stetig diffbar mit $\phi^{-1} : V \to U$ stetig diffbar.
+	Sei $ \in \R^{n \times n}$ invertierbar, dann:\\ 
+	$A\int\limits_{\R^n} f(Ax) |\det A| d^n x = \int\limits_{\R^n} f(y) d^n y$ \\
+	Transformationssatz: Seien $U,V \subset \R^n$ offene Mengen und $\phi: U \to V$ stetig
+	diffbar mit $\phi^{-1} : V \to U$ stetig diffbar.
 	Dann gilt f"ur alle stetigen Funktionen f mit kompaktem Tr"ager in V: \\
 	$\int\limits_U f(\phi(x)) \cdot \big| \det D \phi(x) \big| d^nx = \int\limits_V f(y) d^n y$
 
 
 \section{Potenzreihe}
 	Sei $(a_n)_{n\in \menge{N}}$ Folge, 
-	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) = \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
+	dann heißt $f:(-r,+r) \rightarrow \menge{R} \quad f(x) 
+	= \sum\limits_{k=0}^\infty a_kx^k$ Potenzreihe. \\
 	$r > 0$ heißt Konvergenzradius, $r = \frac{1}{\limsup \sqrt[n]{|a_n|}}$. \\
-	Welche Funktionen $f$ haben die Darstellung $f(x) = \sum\limits_{k=0}^\infty a_kx^k \quad \forall x \in (-r,r) \rightarrow$ \underline{Taylorentwicklung} \\
-	$f: \menge{I} \rightarrow \menge{R}, \menge{I} = (a,b) \quad f (n+1)$-mal stetig diffbar, dann: \\
+	Welche Funktionen $f$ haben die Darstellung:\\
+	$f(x) = \sum\limits_{k=0}^\infty a_kx^k \quad \forall x \in (-r,r) \rightarrow$
+	\underline{Taylorentwicklung} \\
+	$f: \menge{I} \rightarrow \menge{R}, \menge{I} = (a,b) \quad f$ sei $(n+1)$-mal stetig diffbar, dann: \\
 	$\forall x,a \in \menge{I}: (x) = \underbrace{ \sum\limits_{k=0}^{n} \frac{f^{(k)} (a)}{k!}(x-a)^k }_{\text{Taylorpolynom n-ten Grades von f um a}} + R_{n+1}(a,x)$ \\
 	$R_{n+1}(a,x) = \begin{cases}
 		\frac{1}{n!} \int\limits_a^x(x-t)^nf^{(n+1)}(t) \d t \\
@@ -543,9 +574,10 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	Sei $\gamma : [a,b] \rightarrow \menge{R}^n$ Kurve und rektifizierbar. \\
 	Ziel: $\tilde\lambda : [a', b'] \rightarrow [a,b]$ mit gleicher Spur wie $\gamma$, aber $DG = 1 \ \forall t \in [a', b']$ \\
 	\begin{enumerate}
-	\item{}  Sei $\phi:[a', b'] \rightarrow [a,b]$ stetig, bijektiv, dann heißt $\phi$ Parametertransformation von $[a,b]$ nach $[a',b']$ \\
-	Definiere: $\tilde\gamma = \gamma \circ \phi, \tilde\gamma:[a', b'] \rightarrow \menge{R}^n$ mit $\tilde\gamma([a',b']) = \gamma(\phi([a',b'])) = \gamma([a,b])$ \\
-	\item{} $S(\xi) = \int\limits_a^\xi ||\gamma'(t)|| \d t, s(0) = 0, s(b) = S(\gamma)$ \\
+	\itemsep0em
+	\item Sei $\phi:[a', b'] \rightarrow [a,b]$ stetig, bijektiv, dann heißt $\phi$ Parametertransformation von $[a,b]$ nach $[a',b']$ \\
+	Definiere: $\tilde\gamma = \gamma \circ \phi, \tilde\gamma:[a', b'] \rightarrow \menge{R}^n$ mit $\tilde\gamma([a',b']) = \gamma(\phi([a',b'])) = \gamma([a,b])$
+	\item $S(\xi) = \int\limits_a^\xi ||\gamma'(t)|| \d t, s(0) = 0, s(b) = S(\gamma)$ \\
 	$s'(\xi) = ||\gamma'(\xi)|| > 0$ \\
 	$s [a,b] \rightarrow [0, S(\gamma)]$ und $s(t) = \int\limits_0^t ||\gamma'(\tau)|| \d \tau $ \\
 	$s^{-1}[0,S(\gamma)] \rightarrow [a,b] \qquad s^{-1}$ wird $\phi$ sein. \\
@@ -560,8 +592,11 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	Sei $N(t) := DT(t)$, mit $D =$ "Rotation um 90°", Normaleneinheitsvektor. \\
 	Ist $\gamma$ zweimal stetig diffbar mit Geschwindigkeit 1, dann ist:
 	$K(s) = \langle T'(s), N(s) \rangle, \quad | K(s) | = || T'(s) ||$ \\
-	Falls $\gamma = (x,y)$, gilt $K(t) = \frac{\dot{x}\ddot{y} - \dot{y}\ddot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}^3} (t)$ \\
-	Falls $\gamma = (x, f(x))$ gilt $K(x) = \frac{f''(x)}{\sqrt{1+f'^2(x)}^3}$ \\
+	Falls $\gamma = (x,y)$, gilt
+	$$K(t) 
+	= \frac{\dot{x}\ddot{y} - \dot{y}\ddot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}^{\; 3}} (t)$$
+	Falls $\gamma = (x, f(x))$ gilt 
+	$K(x) = \frac{f''(x)}{\sqrt{1+f'^2(x)}^{\; 3}}$
 	Kr"ummungsradius $\rho (t) := \frac{1}{K(t)}$ \\
 	Kr"ummungsmittelpunkt $m(t) := \gamma(t) + \rho(t)N(t)$
 
@@ -619,6 +654,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	\subsection{Beispiele für Folgen}
 		$(a_n)_{n \in \N} \to 0, \, (b_n)_{n \in \N} \to +\infty$\\
 		\begin{itemize}
+			\itemsep0em
 			\item $(a_n b_n) \to 0$: 
 				$ \qquad \qquad \qquad a_n := 0, \, b_n := n$
 			\item $(a_n b_n) \to a \in \R \setminus \{0\}$: 
@@ -636,6 +672,7 @@ Falls $f:[a,b] \rightarrow \menge{R}$ beschr"ankt und monoton oder $f$ st"uckwei
 	Gegeben sei eine rekursiv definierte Folge $(a_n)_{n \in \N}$. 
 	Zu zeigen: $(a_n)$ konvergiert und der Grenzwert ist $a$.
 	\begin{enumerate}
+		\itemsep0em
 		\item Monotonie zeigen 
 		\item Beschränktheit zeigen (die ersten beiden Schritte häufig mit Induktion)
 		\item Konvergenz folgern (mehr oder weniger instant aus den beiden vorherigen Punkten)
@@ -691,42 +728,41 @@ $$
 	\qquad \lim_{x \to 0} \frac{\sin{x}}{x} = 1
 $$
 \subsection{Folgen als Gegenbeispiele für falsche Aussagen}
-Für jede der nachfolgenden Aussagen (a)-(d) (welche allesamt falsch sind) wird eine Funktion $f:(-1,1) \to \mathbb{R}$ gesucht, die ein Gegenbeispiel darstellt. \\\\
-a)\\
+Für jede der nachfolgenden Aussagen (a)-(d) (welche allesamt falsch sind) wird eine Funktion $f:(-1,1) \to \mathbb{R}$ gesucht, die ein Gegenbeispiel darstellt.
+\begin{itemize}
+\itemsep-0.5em
+\item
 Wenn $f'(x)$ für jedes $x \neq 0$ existiert und der Grenzwert $\lim_{x \to 0} f'(x)$ existiert, dann ist $f$ auch in $0$ differenzierbar. \\
-
 Ein Gegenbeispiel ist die Signums-Funktion, welche definiert ist als:
-
-$$ \text{signum(}x) = \begin{cases} \; 1 & ,x > 0 \\ \; 0 & ,x = 0 \\ -1 & ,x < 0 \end{cases} $$Sie lässt sich zwar an allen Stellen $ \neq 0$ ableiten und der Grenzwert gegen 0 existiert (man nähert sich von beiden Seiten auf $f'(x) = 0$, jedoch ist die erste Ableitung bei $x=0$ nicht definiert.
-\\
-
-
-b)\\
+$$ \text{signum(}x) = \begin{cases} \; 1 & ,x > 0 \\ \; 0 & ,x = 0 \\ -1 & ,x < 0 \end{cases} $$Sie lässt sich zwar an allen Stellen $ \neq 0$ ableiten und der Grenzwert gegen 0 existiert (man nähert sich von beiden Seiten auf $f'(x) = 0$, jedoch ist die erste Ableitung bei $x=0$ nicht definiert.\\
+\item
 Wenn $f$ in $0$ nicht differenzierbar ist und deshalb \emph{nicht} $f'(0) = 0$ gilt, dann hat $f$ in $0$ kein lokales Extremum. \\
-
 Ein Gegenbeispiel wäre die Betragsfunktion $f(x) = |x|$. $f'(0)$ ist hier nicht definiert, aber bei $x=0$ hat die Funktion dennoch ein Minimum.\\
-
-% check
-
-c)\\
+\item
 Wenn $f$ stetig differenzierbar auf $(-1,1)$ ist und $f'(0) = 0$, dann ist $0$ ein lokales Extremum von $f$. \\
-
 Ein Gegenbeispiel ist $f(x) = x^3$. $f'(x) = 3x^2$, was also für $x=0$ wohldefiniert ist. Dennoch ist $x=0$ kein lokales Extremum, sondern ein Wendepunkt.\\
-
-% check
-
-d)\\
+\item
 Wenn $f$ stetig differenzierbar auf $(-1,1)$ ist und in $0$ ein lokales Maximum hat, dann existiert auch $f''(0)$ und es ist $f''(0) < 0$.\\
-
-Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant. Dann gilt $f'(x) = 0$ und $f''(x) = 0$ und somit $f''(x) \not< 0$.\\
-
+Sei $f(x) =1$. Sie hat in $x=0$ ein lokales Maximum, denn sie ist konstant. Dann gilt $f'(x) = 0$ und $f''(x) = 0$ und somit $f''(x) \not< 0$.
+\end{itemize}
 \subsection{Integrale}
+$$ 
+	\int x^n \, \d x = \frac{x^{n+1}}{n+1} + C, n \neq -1, \qquad
+	\int e^x \, \d x = e^x + C, 
+$$
+$$
+	\int \sin{x}\, \d x = - \cos{x} + C, \quad 
+	\int \cos{x} \, \d x = \sin{x} + C	
+$$
+$$
+	\qquad \int \frac{1}{x} \, \d x = \ln |x| + C, \qquad
+	\int a^x \d x = \frac{1}{\ln{a}} a^x + C$$
 
-$$ \int x^n \, \d x = \frac{x^{n+1}}{n+1} + C, n \neq -1, \, \int \cos{x} \, \d x = \sin{x} + C, \, \int e^x \, \d x = e^x + C $$
-$$ \int \frac{1}{x} \, \d x = \ln |x| + C, \, \int \sin{x}\, \d x = - \cos{x} + C, \, \int a^x \d x = \frac{1}{\ln{a}} a^x + C$$
-
-$$ \int \frac{1}{a^2 + x^2} \, \d x = \frac{1}{a} \arctan{\frac{x}{a}} + C , \, \int \frac{1}{\sqrt{a^2-x^2}} \, \d x = \arcsin{\frac{x}{a}} + C, |x| < a $$
-
+$$ \int \frac{1}{a^2 + x^2} \, \d x = \frac{1}{a} \arctan{\frac{x}{a}} + C
+$$
+$$
+	\int \frac{1}{\sqrt{a^2-x^2}} \, \d x = \arcsin{\frac{x}{a}} + C, |x| < a 
+$$
 $$
 	\int \arcsin \frac{x}{a} \, \d x = x \arcsin \frac{x}{a} + \sqrt{a^2 - x^2}  + C
 $$
@@ -736,20 +772,7 @@ $$
 $$
 	\int \arctan x \, \d x = x \arctan x - \frac{1}{2} \ln (x^2+1) + C
 $$
-
-
 %$$ \int \frac{1}{a^2 + x^2} \d x = \frac{1}{a} \arctan{\left(\frac{x}{a}\right)} + C , \, \int \frac{1}{\sqrt{a^2-x^2}} \d x = \arcsin{\left(\frac{x}{a}\right)} + C, |x| < a $$
-
-\subsection{Ableitungen}
-
-$f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$ \\
-$f(x) = \sqrt{x} = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2}x^{-\frac{1}{2}}$\\
-$f(x) = \sin{x} \Rightarrow f'(x) = \cos{x}$ \\
-$f(x) = \cos{x} \Rightarrow f'(x) = - \sin{x}$ \\
-$f(x) = e^x \Rightarrow f'(x) = e^x $ \\
-$f(x) = \ln{x} \Rightarrow f'(x) = \frac{1}{x}$ \\
-$f(x) = a^x \Rightarrow f'(x) = a^x (\ln{a})$\\
-
 \subsection{Trigonometrische Formeln}
 $$
 	\tan x = \frac{\sin x}{\cos x} , \qquad
@@ -765,6 +788,8 @@ $$
 $$
 $$
 	\cos 2x = \cos^2 x- \sin^2 x \, = \, 2 \cos^2 x - 1 \, = \, 1 - 2 \sin^2 x 
+$$
+$$
 	\, = \, \frac{1 - \tan^2 x}{1 + \tan^2 x}
 $$
 $$
@@ -792,6 +817,14 @@ $$
 	\sinh 2x = 2 \sinh x \cosh x, \qquad
 	\cosh 2x = \cosh^2 x + \sinh^2 x
 $$
+\subsection{Ableitungen}
+$f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$ \\
+$f(x) = \sqrt{x} = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2}x^{-\frac{1}{2}}$\\
+$f(x) = \sin{x} \Rightarrow f'(x) = \cos{x}$ \\
+$f(x) = \cos{x} \Rightarrow f'(x) = - \sin{x}$ \\
+$f(x) = e^x \Rightarrow f'(x) = e^x $ \\
+$f(x) = \ln{x} \Rightarrow f'(x) = \frac{1}{x}$ \\
+$f(x) = a^x \Rightarrow f'(x) = a^x (\ln{a})$\\
 \subsection{Plots}
 \includegraphics[scale=0.5]{trig1}
 \includegraphics[scale=0.5]{trig2}
@@ -801,7 +834,9 @@ $$
 		\lim_{n \to \infty} \frac{e^{h_n} - 1}{h_n} = 1
 	$$
 	Plot von $\sin x \cos x$:\\
-	http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y
+	http://www.wolframalpha.com/input/?i=plot+sin+x+cos+y\\
+	
+	\includegraphics[scale=0.2]{close_enough}
 
 %
 %
